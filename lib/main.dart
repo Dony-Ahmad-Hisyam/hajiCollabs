@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:haji/widget/laranganIhramIDN.dart';
 import 'package:haji/widget/tataCaraIDN.dart';
+import 'package:haji/widget/wajibHajiUSA.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const laranganIhramPage(),
+      home: const wajibHajiUSAPage(),
     );
   }
 }

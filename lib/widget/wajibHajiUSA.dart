@@ -31,7 +31,7 @@ class _wajibHajiUSAPageState extends State<wajibHajiUSAPage> {
           Positioned.fill(
             top: 0.1,
             child: Image.asset(
-              'images/whUSA.png',
+              'images/whusa.png',
               alignment: Alignment.topCenter,
             ),
           ),
