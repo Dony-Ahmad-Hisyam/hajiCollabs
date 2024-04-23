@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haji/widget/laranganIhramIDN.dart';
 import 'package:haji/widget/tataCaraIDN.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const TataCaraIDNPage(),
+      home: const laranganIhramPage(),
     );
   }
 }
