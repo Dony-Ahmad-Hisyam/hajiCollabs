@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:haji/widget/laranganIhramIDN.dart';
+import 'package:haji/navigasi/pilih_bahasa_screen.dart';
 import 'package:haji/widget/tataCaraIDN.dart';
-import 'package:haji/widget/wajibHajiUSA.dart';
+import './navigasi/core/app_export.dart';
 
+var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  ThemeHelper().changeTheme('primary');
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const TataCaraIDNPage(),
+    return Sizer(
+      builder: (context, orientation, deviceType) {
+        return MaterialApp(
+          theme: theme,
+          title: 'farizi_s_application3',
+          debugShowCheckedModeBanner: false,
+          initialRoute: AppRoutes.pilihBahasaScreen,
+          routes: AppRoutes.routes,
+        );
+      },
     );
   }
 }
