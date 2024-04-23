@@ -14,7 +14,7 @@ class DashboardScreenIDN extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Container(
-            height: 900.h, // Set the height of the container
+            height: 800.h,
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(horizontal: 13.h),
             child: Stack(
@@ -26,11 +26,12 @@ class DashboardScreenIDN extends StatelessWidget {
                   margin: EdgeInsets.only(bottom: 19.v),
                 ),
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch, // Ensure the column stretches to full width
+                  crossAxisAlignment: CrossAxisAlignment
+                      .stretch, // Ensure the column stretches to full width
                   children: [
-                    SizedBox(height: 220),
+                    SizedBox(height: 80),
                     _buildfdefOneList(context),
-                    SizedBox(height: 15),
+                    SizedBox(height: 4),
                     _buildHakList(context),
                     _buildWanitaOneList(context),
                     SizedBox(height: 10.v),
@@ -47,7 +48,7 @@ class DashboardScreenIDN extends StatelessWidget {
 
   Widget _buildHakList(BuildContext context) {
     return SizedBox(
-      height: 216.v,
+      height: 100.v,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -69,17 +70,18 @@ class DashboardScreenIDN extends StatelessWidget {
 
   Widget _buildHikmahList(BuildContext context) {
     return SizedBox(
-      height: 216.v,
+      height: 111.v,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
+            SizedBox(width: 10.h),
             _buildCustomImageView1(ImageConstant.imgHikmah1, () {
               Navigator.pushNamed(context, AppRoutes.definisidIDN);
             }),
             SizedBox(width: 10.h),
             _buildCustomImageView1(ImageConstant.imgDoa1, () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.doaNiatIDN);
             }),
           ],
         ),
@@ -91,7 +93,7 @@ class DashboardScreenIDN extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        width: 160.h,
+        width: 150.h,
         child: CustomImageView(
           imagePath: imagePath,
           margin: EdgeInsets.only(),
@@ -177,8 +179,13 @@ class Defonelist extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       child: Column(
         children: [
-          CustomImageView(
-            imagePath: ImageConstant.imgDef1,
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+            },
+            child: CustomImageView(
+              imagePath: ImageConstant.imgDef1,
+            ),
           ),
         ],
       ),

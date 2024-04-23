@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:haji/navigasi/pilih_bahasa_screen.dart';
-import 'package:haji/widget/tataCaraIDN.dart';
 import './navigasi/core/app_export.dart';
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
@@ -16,8 +14,8 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp(
-          theme: theme,
-          title: 'farizi_s_application3',
+          // theme: theme,
+          title: 'Hajj Elev',
           debugShowCheckedModeBanner: false,
           initialRoute: AppRoutes.pilihBahasaScreen,
           routes: AppRoutes.routes,

@@ -26,7 +26,8 @@ class DashboardScreenUSA extends StatelessWidget {
                   margin: EdgeInsets.only(bottom: 19.v),
                 ),
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch, // Ensure the column stretches to full width
+                  crossAxisAlignment: CrossAxisAlignment
+                      .stretch, // Ensure the column stretches to full width
                   children: [
                     SizedBox(height: 220),
                     _buildfdefOneList(context),
