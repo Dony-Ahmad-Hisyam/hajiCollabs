@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'dart:math' as math; 
 class TataCaraIDNPage extends StatefulWidget {
   const TataCaraIDNPage({Key? key}) : super(key: key);
 
@@ -39,29 +39,46 @@ class _TataCaraIDNPageState extends State<TataCaraIDNPage> {
           Positioned.fill(
             top: MediaQuery.of(context).size.height * 0.51,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(horizontal: 1),
               child: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: Colors.white,
                 ),
+                
                 child: ListView.builder(
+                  padding: EdgeInsets.symmetric(horizontal: 1), 
                   itemCount: steps.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.asset(
-                          stepImages[index],
-                          alignment: Alignment.topCenter,
+                       Row(
+                          mainAxisAlignment: MainAxisAlignment.center, // Menempatkan gambar di tengah
+                          children: [
+                            Image.asset(
+                              stepImages[index],
+                              width: 250, // Lebar gambar disesuaikan
+              height: 250, // Tinggi gambar disesuaikan
+              alignment: Alignment.center,
+                            ),
+                          ],
                         ),
                         Text(
                           steps[index],
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 15,
                             color: Color(0xFF235092),
                           ),
                         ),
+                        SizedBox(height: 10),
+                        if (index == steps.length - 0) // Menampilkan gambar di tengah untuk langkah terakhir
+                          Image.asset(
+                            stepImages[index + 0],
+                            width: 250, // Lebar gambar disesuaikan
+              height: 250, // Tinggi gambar disesuaikan
+              alignment: Alignment.center,
+                          ),
                         SizedBox(height: 10),
                       ],
                     );
