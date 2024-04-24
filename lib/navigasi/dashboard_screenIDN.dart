@@ -54,7 +54,7 @@ class DashboardScreenIDN extends StatelessWidget {
         child: Row(
           children: [
             _buildCustomImageView(ImageConstant.imgHak1, () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.hakJemaahIDN);
             }),
             _buildCustomImageView(ImageConstant.imgWajib1, () {
               Navigator.pushNamed(context, AppRoutes.wajibhajiIDN);
@@ -77,7 +77,7 @@ class DashboardScreenIDN extends StatelessWidget {
           children: [
             SizedBox(width: 10.h),
             _buildCustomImageView1(ImageConstant.imgHikmah1, () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.hikmahIDN);
             }),
             SizedBox(width: 10.h),
             _buildCustomImageView1(ImageConstant.imgDoa1, () {

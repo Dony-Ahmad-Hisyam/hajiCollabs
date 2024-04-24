@@ -10,7 +10,10 @@ class ImageConstant {
   static String imgGroup9 = 'images/img_group_9.svg';
 
   static String imageNotFound = 'images/image_not_found.png';
-
+static String imgHak = 'images/hakjamaah.jpg';
+static String imgHuk = 'images/hakjamaahen.jpg';
+static String imgHikidn = 'images/hikmahidn.png';
+static String imgHikusa = 'images/hikmahusa.png';
   static String imgHak1 = 'images/imghak.png';
   static String imgDef1 = 'images/img_def_1.png';
   static String imgWajib1 = 'images/img_wajib_1.png';
