@@ -6,6 +6,7 @@ import '../dashboard_screenUSA.dart';
 import 'package:haji/widget/definisiIDN.dart';
 import 'package:haji/widget/definisiUSA.dart';
 import 'package:haji/widget/tataCaraIDN.dart';
+import 'package:haji/widget/tataCaraUSA.dart';
 import 'package:haji/widget/wajibHajiIDN.dart';
 import 'package:haji/widget/wajibHajiUSA.dart';
 import 'package:haji/widget/laranganIhramIDN.dart';
@@ -21,6 +22,7 @@ class AppRoutes {
   static const String wajibhajiUSA = '/wajiHajibUSA';
   static const String wajibhajiIDN = '/wajiHajibIDN';
   static const String tatacaraIDN = '/tataCaraIDN';
+  static const String tataCaraUSA = '/tataCaraUSA';
   static const String laranganIDN = '/laranganIhramIDN';
   static const String laranganUSA = '/laranganIhramUSA';
   static const String doaNiatIDN = '/doaNiatIDN';
@@ -34,6 +36,7 @@ class AppRoutes {
     wajibhajiIDN: (context) => wajibHajiPage(),
     wajibhajiUSA: (context) => wajibHajiUSAPage(),
     tatacaraIDN: (context) => TataCaraIDNPage(),
+    tataCaraUSA:(context) => tataCaraUSAPage(),
     laranganIDN: (context) => laranganIhramPage(),
     laranganUSA: (context) => prohibitionsOfIhramPage(),
     doaNiatIDN: (context) => DoaNiatIDNPage(),

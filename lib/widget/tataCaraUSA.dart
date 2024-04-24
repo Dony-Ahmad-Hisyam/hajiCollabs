@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math; 
-class TataCaraIDNPage extends StatefulWidget {
-  const TataCaraIDNPage({Key? key}) : super(key: key);
+class tataCaraUSAPage extends StatefulWidget {
+  const tataCaraUSAPage({Key? key}) : super(key: key);
 
   @override
-  State<TataCaraIDNPage> createState() => _TataCaraIDNPageState();
+  State<tataCaraUSAPage> createState() => _tataCaraUSAState();
 }
 
-class _TataCaraIDNPageState extends State<TataCaraIDNPage> {
+class _tataCaraUSAState extends State<tataCaraUSAPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,12 +105,12 @@ List<String> steps = [
 
 
 List<String> stepImages = [
-  'images/1.png',
-  'images/2.png',
-  'images/3.png',
-  'images/4.png',
+  'images/11.png',
+  'images/12.png',
+  'images/13.png',
+  'images/14.png',
   'images/5.png',
-  'images/6.png',
+  'images/16.png',
   'images/7.png',
   'images/done.jpeg'
 ];
