@@ -12,6 +12,7 @@ import 'package:haji/widget/wajibHajiUSA.dart';
 import 'package:haji/widget/laranganIhramIDN.dart';
 import 'package:haji/widget/laranganIhramUSA.dart';
 import 'package:haji/widget/doaNiatIDN.dart';
+import 'package:haji/widget/doaNiatUSA.dart';
 
 class AppRoutes {
   static const String pilihBahasaScreen = '/pilih_bahasa_screen';
@@ -26,6 +27,7 @@ class AppRoutes {
   static const String laranganIDN = '/laranganIhramIDN';
   static const String laranganUSA = '/laranganIhramUSA';
   static const String doaNiatIDN = '/doaNiatIDN';
+  static const String doaNiatUSA = '/doaNiatUSA';
 
   static Map<String, WidgetBuilder> routes = {
     dashboardIDN: (context) => DashboardScreenIDN(),
@@ -36,9 +38,10 @@ class AppRoutes {
     wajibhajiIDN: (context) => wajibHajiPage(),
     wajibhajiUSA: (context) => wajibHajiUSAPage(),
     tatacaraIDN: (context) => TataCaraIDNPage(),
-    tataCaraUSA:(context) => tataCaraUSAPage(),
+    tataCaraUSA: (context) => tataCaraUSAPage(),
     laranganIDN: (context) => laranganIhramPage(),
     laranganUSA: (context) => prohibitionsOfIhramPage(),
     doaNiatIDN: (context) => DoaNiatIDNPage(),
+    doaNiatUSA: (context) => DoaNiatUSAPage(),
   };
 }
