@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           // theme: theme,
           title: 'Hajj Elev',
           debugShowCheckedModeBanner: false,
-          initialRoute: AppRoutes.dashboardIDN,
+          initialRoute: AppRoutes.pilihBahasaScreen,
           routes: AppRoutes.routes,
         );
       },

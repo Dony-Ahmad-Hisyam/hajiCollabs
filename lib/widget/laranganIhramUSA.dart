@@ -27,24 +27,18 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
           },
         ),
       ),
-      body: Container(
-        color: Colors.white,
-        child: Stack(
-          children: [
-            Positioned.fill(
-              child: Image.asset(
-                'images/Larangan Ihram.png',
-                alignment: Alignment.topCenter,
-              ),
-            ),
-            Positioned.fill(
-              top: MediaQuery.of(context).size.height * 0.5,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Image.asset(
+                  'images/Prohibition of Ihram.png',
+                  alignment: Alignment.topCenter,
+                ),
+                Container(
+                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 30),
                   child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -324,10 +318,10 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                     ),
                   ),
                 ),
-              ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
