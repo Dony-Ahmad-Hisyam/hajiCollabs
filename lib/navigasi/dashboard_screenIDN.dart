@@ -149,7 +149,7 @@ class WanitaonelistItemWidget extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.tataHajiWanitaIDN);
             },
             child: CustomImageView(
               imagePath: ImageConstant.imgWanita1,

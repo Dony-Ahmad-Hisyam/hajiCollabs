@@ -101,8 +101,10 @@ class CaraWanitaPage extends StatelessWidget {
                                       shadows: [
                                         Shadow(
                                           blurRadius: 5, // Radius bayangan
-                                          color: Colors.black.withOpacity(0.2), // Warna bayangan
-                                          offset: Offset(0, 3), // Penyimpangan bayangan
+                                          color: Colors.black.withOpacity(
+                                              0.2), // Warna bayangan
+                                          offset: Offset(
+                                              0, 3), // Penyimpangan bayangan
                                         ),
                                       ],
                                     ),
@@ -130,7 +132,8 @@ class CaraWanitaPage extends StatelessWidget {
                           shadows: [
                             Shadow(
                               blurRadius: 5, // Radius bayangan
-                              color: Colors.black.withOpacity(0.2), // Warna bayangan
+                              color: Colors.black
+                                  .withOpacity(0.2), // Warna bayangan
                               offset: Offset(0, 3), // Penyimpangan bayangan
                             ),
                           ],
@@ -157,12 +160,15 @@ class CaraWanitaPage extends StatelessWidget {
                                 fontFamily: 'MontserratRomanBold',
                                 color: Color(0xFF235092),
                                 fontWeight: FontWeight.bold,
-                                fontSize: 18, // Ukuran font diperbesar menjadi 18
+                                fontSize:
+                                    18, // Ukuran font diperbesar menjadi 18
                                 shadows: [
                                   Shadow(
                                     blurRadius: 5, // Radius bayangan
-                                    color: Colors.black.withOpacity(0.2), // Warna bayangan
-                                    offset: Offset(0, 3), // Penyimpangan bayangan
+                                    color: Colors.black
+                                        .withOpacity(0.2), // Warna bayangan
+                                    offset:
+                                        Offset(0, 3), // Penyimpangan bayangan
                                   ),
                                 ],
                               ),

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:haji/navigasi/core/app_export.dart';
+import 'package:haji/widget/tataHajiWanitaIDN.dart';
+import 'package:haji/widget/tataHajiWanitaUSA.dart';
 import 'package:haji/widget/doaNiatIDN.dart';
 import '..//pilih_bahasa_screen.dart';
 import '../dashboard_screenIDN.dart';
@@ -33,9 +36,11 @@ class AppRoutes {
   static const String doaNiatIDN = '/doaNiatIDN';
   static const String doaNiatUSA = '/doaNiatUSA';
   static const String hikmahIDN = '/hikmahIDN';
-static const String hikmahUSA = '/hikmahUSA';
-static const String hakJemaahIDN = '/hakJemaahIDN';
-static const String hakJemaahUSA = '/hakJemaahUSA';
+  static const String hikmahUSA = '/hikmahUSA';
+  static const String hakJemaahIDN = '/hakJemaahIDN';
+  static const String hakJemaahUSA = '/hakJemaahUSA';
+  static const String tataHajiWanitaIDN = '/tataHajiWanitaIDN';
+  static const String tataHajiWanitaUSA = '/tataHajiWanitaEng';
 
   static Map<String, WidgetBuilder> routes = {
     dashboardIDN: (context) => DashboardScreenIDN(),
@@ -51,9 +56,11 @@ static const String hakJemaahUSA = '/hakJemaahUSA';
     laranganUSA: (context) => prohibitionsOfIhramPage(),
     doaNiatIDN: (context) => DoaNiatIDNPage(),
     doaNiatUSA: (context) => DoaNiatUSAPage(),
-    hikmahIDN:(context) => hikmahidn(),
-    hikmahUSA:(context) => hikmahusa(),
-    hakJemaahIDN:(context) => hakjemaahidn(),
-     hakJemaahUSA:(context) => hakjemaahusa(),
+    hikmahIDN: (context) => hikmahidn(),
+    hikmahUSA: (context) => hikmahusa(),
+    hakJemaahIDN: (context) => hakjemaahidn(),
+    hakJemaahUSA: (context) => hakjemaahusa(),
+    tataHajiWanitaIDN: (context) => CaraWanitaPage(),
+    tataHajiWanitaUSA: (context) => CaraWanitaEngPage(),
   };
 }
