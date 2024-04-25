@@ -54,13 +54,13 @@ class DashboardScreenUSA extends StatelessWidget {
         child: Row(
           children: [
             _buildCustomImageView(ImageConstant.imgHaken, () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.hakJemaahUSA);
             }),
             _buildCustomImageView(ImageConstant.imgWajiben, () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.wajibhajiUSA);
             }),
             _buildCustomImageView(ImageConstant.imgTataen, () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.tataCaraUSA);
             }),
           ],
         ),
@@ -76,11 +76,11 @@ class DashboardScreenUSA extends StatelessWidget {
         child: Row(
           children: [
             _buildCustomImageView1(ImageConstant.imgHikmahen, () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.hikmahUSA);
             }),
             SizedBox(width: 10.h),
             _buildCustomImageView1(ImageConstant.imgDoaen, () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.doaNiatUSA);
             }),
           ],
         ),
@@ -148,7 +148,7 @@ class WanitaonelistItemWidget extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.tataHajiWanitaUSA);
             },
             child: CustomImageView(
               imagePath: ImageConstant.imgWanitaen,
@@ -157,7 +157,7 @@ class WanitaonelistItemWidget extends StatelessWidget {
           SizedBox(height: 16.v),
           GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+              Navigator.pushNamed(context, AppRoutes.laranganUSA);
             },
             child: CustomImageView(
               imagePath: ImageConstant.imgIhramen,
@@ -178,10 +178,15 @@ class Defonelist extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       child: Column(
         children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, AppRoutes.definisidUSA);
+            },
+            child: 
           CustomImageView(
-            imagePath: ImageConstant.imgDef1,
+            imagePath: ImageConstant.imgDefen,
           ),
-        ],
+      )],
       ),
     );
   }

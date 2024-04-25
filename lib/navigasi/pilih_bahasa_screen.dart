@@ -1,7 +1,7 @@
 import 'package:haji/navigasi/theme/custom_app_bar.dart';
 import 'package:haji/navigasi/theme/appbar_title.dart';
 import 'package:haji/navigasi/theme/appbar_subtitle.dart';
-import 'package:haji/navigasi/theme/appbar_trailing_dropdown.dart';
+import 'package:haji/navigasi/theme/custom_drop_down.dart';
 import 'package:haji/navigasi/theme/custom_outlined_button.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
 import 'package:flutter/material.dart';
@@ -19,9 +19,9 @@ class PilihBahasaScreen extends StatefulWidget {
 
 String currentLanguage = "indonesia";
 class _PilihBahasaScreenState extends State<PilihBahasaScreen> {
-  List<String> dropdownItemList = [
-    "English",
+  List<String> dropdownItemList = [  
     "Indonesian",
+    "English",
   ];
 
   @override
@@ -139,25 +139,21 @@ PreferredSizeWidget _buildAppBar(BuildContext context) {
       ),
     ),
     actions: [
-      SizedBox(height: 8.v),
-      AppbarTrailingDropdown(
-        margin: EdgeInsets.only(
-          left: 12.h,
-          right: 12.h,
-          bottom: 16.v,
+        SizedBox(height: 8.v),
+        Padding(
+          padding: EdgeInsets.only(left: 12.h, right: 12.h, bottom: 16.v),
+          child: CustomDropDown(
+            width: 140.h,
+            hintText: "Pilih Bahasa",
+            items: dropdownItemList,
+            onChanged: (value) {
+              setState(() {
+                currentLanguage = value.toLowerCase();
+              });
+            },
+          ),
         ),
-        hintText: "Pilih Bahasa",
-        items: dropdownItemList,
-        onTap: (value) {
-  if (value == "Indonesia") {
-    currentLanguage = "indonesia";
-  } else if (value == "English") {
-    currentLanguage = "english";
-  }
-  Navigator.of(context).pop();
-}
-      ),
-    ],
+      ],
   );
 }
 

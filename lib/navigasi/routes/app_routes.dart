@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:haji/navigasi/core/app_export.dart';
-import 'package:haji/widget/tataHajiWanitaIDN.dart';
-import 'package:haji/widget/tataHajiWanitaUSA.dart';
-import 'package:haji/widget/doaNiatIDN.dart';
-import '..//pilih_bahasa_screen.dart';
+import '../pilih_bahasa_screen.dart';
 import '../dashboard_screenIDN.dart';
 import '../dashboard_screenUSA.dart';
+import 'package:haji/widget/tataHajiWanitaIDN.dart';
+import 'package:haji/widget/tataHajiWanitaUSA.dart';
 import 'package:haji/widget/definisiIDN.dart';
 import 'package:haji/widget/definisiUSA.dart';
 import 'package:haji/widget/tataCaraIDN.dart';
