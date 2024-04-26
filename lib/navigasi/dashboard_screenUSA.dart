@@ -14,7 +14,7 @@ class DashboardScreenUSA extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Container(
-            height: 900.h, // Set the height of the container
+            height: 800.h, // Set the height of the container
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(horizontal: 13.h),
             child: Stack(
@@ -29,9 +29,9 @@ class DashboardScreenUSA extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment
                       .stretch, // Ensure the column stretches to full width
                   children: [
-                    SizedBox(height: 220),
+                    SizedBox(height: 80),
                     _buildfdefOneList(context),
-                    SizedBox(height: 15),
+                    SizedBox(height: 4),
                     _buildHakList(context),
                     _buildWanitaOneList(context),
                     SizedBox(height: 10.v),
@@ -48,7 +48,7 @@ class DashboardScreenUSA extends StatelessWidget {
 
   Widget _buildHakList(BuildContext context) {
     return SizedBox(
-      height: 216.v,
+      height: 100.v,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -70,7 +70,7 @@ class DashboardScreenUSA extends StatelessWidget {
 
   Widget _buildHikmahList(BuildContext context) {
     return SizedBox(
-      height: 216.v,
+      height: 111.v,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -92,7 +92,7 @@ class DashboardScreenUSA extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        width: 160.h,
+        width: 150.h,
         child: CustomImageView(
           imagePath: imagePath,
           margin: EdgeInsets.only(),
@@ -182,11 +182,11 @@ class Defonelist extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(context, AppRoutes.definisidUSA);
             },
-            child: 
-          CustomImageView(
-            imagePath: ImageConstant.imgDefen,
-          ),
-      )],
+            child: CustomImageView(
+              imagePath: ImageConstant.imgDefen,
+            ),
+          )
+        ],
       ),
     );
   }

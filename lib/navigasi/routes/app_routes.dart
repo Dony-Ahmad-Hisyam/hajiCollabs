@@ -50,7 +50,7 @@ class AppRoutes {
     wajibhajiIDN: (context) => wajibHajiPage(),
     wajibhajiUSA: (context) => wajibHajiUSAPage(),
     tatacaraIDN: (context) => TataCaraIDNPage(),
-    tataCaraUSA: (context) => tataCaraUSAPage(),
+    tataCaraUSA: (context) => TataCaraUSAPage(),
     laranganIDN: (context) => laranganIhramPage(),
     laranganUSA: (context) => prohibitionsOfIhramPage(),
     doaNiatIDN: (context) => DoaNiatIDNPage(),

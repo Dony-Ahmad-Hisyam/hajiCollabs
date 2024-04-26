@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'dart:math' as math; 
-class tataCaraUSAPage extends StatefulWidget {
-  const tataCaraUSAPage({Key? key}) : super(key: key);
 
-  @override
-  State<tataCaraUSAPage> createState() => _tataCaraUSAState();
-}
+class TataCaraUSAPage extends StatelessWidget {
+  const TataCaraUSAPage({Key? key}) : super(key: key);
 
-class _tataCaraUSAState extends State<tataCaraUSAPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,68 +21,49 @@ class _tataCaraUSAState extends State<tataCaraUSAPage> {
           },
         ),
       ),
-      body: Stack(
-        children: [
-          Positioned.fill(
-            top: 0.1,
-            child: Image.asset(
-              'images/tataIDN.png',
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: MediaQuery.of(context).padding.top),
+            Image.asset(
+              'images/tataCaraUSA.png',
               alignment: Alignment.topCenter,
             ),
-          ),
-          // Kotak isi deskripsi
-          Positioned.fill(
-            top: MediaQuery.of(context).size.height * 0.51,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 1),
-              child: Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                ),
-                
-                child: ListView.builder(
-                  padding: EdgeInsets.symmetric(horizontal: 1), 
-                  itemCount: steps.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                       Row(
-                          mainAxisAlignment: MainAxisAlignment.center, // Menempatkan gambar di tengah
-                          children: [
-                            Image.asset(
-                              stepImages[index],
-                              width: 250, // Lebar gambar disesuaikan
-              height: 250, // Tinggi gambar disesuaikan
-              alignment: Alignment.center,
-                            ),
-                          ],
+            Padding(
+              padding: EdgeInsets.all(30),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: List.generate(
+                  steps.length,
+                  (index) => Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 8.0),
+                        child: Image.asset(
+                          stepImages[index],
+                          alignment: Alignment.topCenter,
                         ),
-                        Text(
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 8.8),
+                        child: Text(
                           steps[index],
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 12,
                             color: Color(0xFF235092),
                           ),
                         ),
-                        SizedBox(height: 10),
-                        if (index == steps.length - 0) // Menampilkan gambar di tengah untuk langkah terakhir
-                          Image.asset(
-                            stepImages[index + 0],
-                            width: 250, // Lebar gambar disesuaikan
-              height: 250, // Tinggi gambar disesuaikan
-              alignment: Alignment.center,
-                          ),
-                        SizedBox(height: 10),
-                      ],
-                    );
-                  },
+                      ),
+                      SizedBox(height: 10), // Adjust this value as needed
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -102,7 +78,6 @@ List<String> steps = [
   '\tPilgrims return to Mina for Mabit during the Tashreeq days (11th, 12th, and 13th of Dhul Hijjah). After sunset each day, pilgrims stone the three pillars (Jamarat) - Ula, Wusta, and Aqabah - seven times each. Pilgrims can leave Mina early on the 12th of Dhul Hijjah after stoning, known as Nafar Awwal. However, its more complete to leave on the 13th of Dhul Hijjah, called Nafar Tsani, stoning for three days during Tashreeq. Pilgrims then return to Makkah, completing all Hajj rituals.',
   '\tTawaf Wada is the farewell circumambulation, marking the conclusion of Hajj rites. After this, pilgrims are allowed to return home or visit Madinah for those who haven’t visited the Prophet Muhammads grave. That concludes the explanation of Hajj rituals, serving as a simulation or practice for pilgrims to understand the sequence and procedures in each pillar.'
 ];
-
 
 List<String> stepImages = [
   'images/11.png',

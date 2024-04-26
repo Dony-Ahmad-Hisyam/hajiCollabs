@@ -1,28 +1,24 @@
-import 'package:haji/navigasi/theme/custom_app_bar.dart';
-import 'package:haji/navigasi/theme/appbar_title.dart';
+import 'package:flutter/material.dart';
+import 'package:haji/navigasi/core/app_export.dart';
 import 'package:haji/navigasi/theme/appbar_subtitle.dart';
+import 'package:haji/navigasi/theme/appbar_title.dart';
+import 'package:haji/navigasi/theme/custom_app_bar.dart';
 import 'package:haji/navigasi/theme/custom_drop_down.dart';
 import 'package:haji/navigasi/theme/custom_outlined_button.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
-import 'package:flutter/material.dart';
-import 'package:haji/navigasi/core/app_export.dart';
 
 class PilihBahasaScreen extends StatefulWidget {
-  PilihBahasaScreen({Key? key})
-      : super(
-          key: key,
-        );
+  PilihBahasaScreen({Key? key}) : super(key: key);
 
   @override
   State<PilihBahasaScreen> createState() => _PilihBahasaScreenState();
 }
 
 String currentLanguage = "indonesia";
+
 class _PilihBahasaScreenState extends State<PilihBahasaScreen> {
-  List<String> dropdownItemList = [  
-    "Indonesian",
-    "English",
-  ];
+  List<String> dropdownItemList = ["Indonesia", "English"];
+  bool isLanguageSelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -31,15 +27,16 @@ class _PilihBahasaScreenState extends State<PilihBahasaScreen> {
         appBar: _buildAppBar(context),
         backgroundColor: Colors.cyan[300],
         body: SizedBox(
-          height: 720.v,
+          height: 720,
           width: double.maxFinite,
           child: Stack(
             alignment: Alignment.topCenter,
             children: [
+              _buildNine(context),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
-                  height: 450.v,
+                  height: 450,
                   width: double.maxFinite,
                   child: Stack(
                     alignment: Alignment.bottomRight,
@@ -50,63 +47,57 @@ class _PilihBahasaScreenState extends State<PilihBahasaScreen> {
                         width: 360.h,
                         alignment: Alignment.center,
                       ),
-                     CustomOutlinedButton(
-                        width: 90.h,
+                      CustomOutlinedButton(
+                        width: 100,
                         text: "NEXT",
-                        margin: EdgeInsets.only(
-                          right: 10.h,
-                          bottom: 40.v,
-                        ),
+                        margin: EdgeInsets.only(right: 10, bottom: 40),
+                        onPressed: isLanguageSelected
+                            ? () {
+                                if (currentLanguage == "indonesia") {
+                                  Navigator.pushNamed(
+                                      context, AppRoutes.dashboardIDN);
+                                } else if (currentLanguage == "english") {
+                                  Navigator.pushNamed(
+                                      context, AppRoutes.dashboardUSA);
+                                }
+                              }
+                            : () {
+                                _showLanguageAlert(context);
+                              },
                         rightIcon: Container(
-                          margin: EdgeInsets.only(left: 4.h),
-                          child: 
-                           GestureDetector(
-          onTap: () {
-            if (currentLanguage == "indonesia") {
-    Navigator.pushNamed(context, AppRoutes.dashboardIDN);
-  } else if (currentLanguage == "english") {
-    Navigator.pushNamed(context, AppRoutes.dashboardUSA);
-  }
-          },
-          child: CustomImageView(
-                            imagePath: ImageConstant.imgArrowleft,
-                            height: 27.v,
-                            width: 28.h,
-                          ),
-                        ),),
+                          margin: EdgeInsets.only(left: 4),
+                        ),
                         alignment: Alignment.bottomRight,
-                        color:Colors.white,
+                        color: Colors.white,
                       ),
                     ],
                   ),
                 ),
               ),
-              _buildNine(context),
               Align(
                 alignment: Alignment.topCenter,
                 child: Container(
-                  height: 80.adaptSize,
-                  width: 80.adaptSize,
-                  margin: EdgeInsets.only(top: 90.v),
+                  height: 80,
+                  width: 80,
+                  margin: EdgeInsets.only(top: 90),
                   decoration: BoxDecoration(
-                    color: appTheme.whiteA700,
-                    borderRadius: BorderRadius.circular(
-                      40.h,
-                    ),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(40),
                   ),
                 ),
               ),
               Align(
                 alignment: Alignment.topCenter,
                 child: Container(
-                  width: 281.h,
-                  margin: EdgeInsets.only(top: 250.v),
+                  width: 281,
+                  margin: EdgeInsets.only(top: 250),
                   child: Text(
                     "A simple application that provides complete guidance for Hajj pilgrims. With an interactive design",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
-                    style: CustomTextStyles.titleLargeExtraBold,
+                    // style: CustomTextStyles.titleLargeExtraBold,
                   ),
                 ),
               ),
@@ -117,61 +108,56 @@ class _PilihBahasaScreenState extends State<PilihBahasaScreen> {
     );
   }
 
-  /// Section Widget
-PreferredSizeWidget _buildAppBar(BuildContext context) {
-  return CustomAppBar(
-    title: Padding(
-      padding: EdgeInsets.only(left: 12.h),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min, // Set mainAxisSize to min
-        children: [
-          SizedBox(height: 8.v),
-          AppbarTitle(
-            text: "Welcome",
-          ),
-          SizedBox(height: 0.v),
-          AppbarSubtitle(
-            text: "Hajj Elev.",
-            margin: EdgeInsets.only(right: 32.h),
-          ),
-        ],
+  PreferredSizeWidget _buildAppBar(BuildContext context) {
+    return CustomAppBar(
+      title: Padding(
+        padding: EdgeInsets.only(left: 12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(height: 8),
+            AppbarTitle(
+              text: "Welcome",
+            ),
+            SizedBox(height: 0),
+            AppbarSubtitle(
+              text: "Hajj Elev.",
+              margin: EdgeInsets.only(right: 32),
+            ),
+          ],
+        ),
       ),
-    ),
-    actions: [
-        SizedBox(height: 8.v),
+      actions: [
+        SizedBox(height: 8),
         Padding(
-          padding: EdgeInsets.only(left: 12.h, right: 12.h, bottom: 16.v),
+          padding: EdgeInsets.only(left: 12, right: 12, bottom: 16),
           child: CustomDropDown(
-            width: 140.h,
+            width: 140,
             hintText: "Pilih Bahasa",
             items: dropdownItemList,
             onChanged: (value) {
               setState(() {
                 currentLanguage = value.toLowerCase();
+                isLanguageSelected = true;
               });
             },
           ),
         ),
       ],
-  );
-}
+    );
+  }
 
-
-  /// Section Widget
   Widget _buildNine(BuildContext context) {
     return Align(
       alignment: Alignment.topCenter,
       child: Container(
-        margin: EdgeInsets.only(top: 130.v),
-        padding: EdgeInsets.symmetric(
-          horizontal: 134.h,
-          vertical: 21.v,
-        ),
+        margin: EdgeInsets.only(top: 130),
+        padding: EdgeInsets.symmetric(horizontal: 134, vertical: 21),
         decoration: BoxDecoration(
           image: DecorationImage(
             image: fs.Svg(
-              ImageConstant.imgGroup9,
+              "ImageConstant.imgGroup9",
             ),
             fit: BoxFit.cover,
           ),
@@ -181,14 +167,34 @@ PreferredSizeWidget _buildAppBar(BuildContext context) {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            SizedBox(height: 75.v),
+            SizedBox(height: 60),
             Text(
-              "Hajj Elev",
-              style: CustomTextStyles.titleLargeExtraBold,
+              "Hajj Elev", style: TextStyle(color: Colors.white, fontSize: 25),
+              // style: CustomTextStyles.titleLargeExtraBold,
             ),
           ],
         ),
       ),
+    );
+  }
+
+  void _showLanguageAlert(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Alert"),
+          content: Text("Please select a language first."),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text("OK"),
+            ),
+          ],
+        );
+      },
     );
   }
 }
