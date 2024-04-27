@@ -81,8 +81,8 @@ List<String> steps = [
 
 List<String> stepImages = [
   'images/11.png',
-  'images/12.png',
-  'images/13.png',
+  'images/wukufatarafah.png',
+  'images/mabitinmuz.png',
   'images/14.png',
   'images/5.png',
   'images/16.png',

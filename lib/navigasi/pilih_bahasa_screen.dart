@@ -30,7 +30,7 @@ class _PilihBahasaScreenState extends State<PilihBahasaScreen> {
           height: 720,
           width: double.maxFinite,
           child: Stack(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.center,
             children: [
               _buildNine(context),
               Align(
@@ -77,14 +77,9 @@ class _PilihBahasaScreenState extends State<PilihBahasaScreen> {
               Align(
                 alignment: Alignment.topCenter,
                 child: Container(
-                  height: 80,
-                  width: 80,
-                  margin: EdgeInsets.only(top: 90),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                ),
+                    width: 120,
+                    margin: EdgeInsets.only(top: 80),
+                    child: Image.asset('images/icon.png')),
               ),
               Align(
                 alignment: Alignment.topCenter,
@@ -93,11 +88,13 @@ class _PilihBahasaScreenState extends State<PilihBahasaScreen> {
                   margin: EdgeInsets.only(top: 250),
                   child: Text(
                     "A simple application that provides complete guidance for Hajj pilgrims. With an interactive design",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
-                    // style: CustomTextStyles.titleLargeExtraBold,
                   ),
                 ),
               ),
@@ -169,8 +166,11 @@ class _PilihBahasaScreenState extends State<PilihBahasaScreen> {
           children: [
             SizedBox(height: 60),
             Text(
-              "Hajj Elev", style: TextStyle(color: Colors.white, fontSize: 25),
-              // style: CustomTextStyles.titleLargeExtraBold,
+              "Hajj Elev",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
             ),
           ],
         ),

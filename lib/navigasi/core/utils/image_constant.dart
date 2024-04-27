@@ -31,6 +31,6 @@ class ImageConstant {
   static String imgIhramen = 'images/DE6.png';
   static String imgHikmahen = 'images/DE7.png';
   static String imgDoaen = 'images/DE8.png';
-  static String page_2_option_3 = 'images/de.png';
+  static String page_2_option_3 = 'images/dbee.png';
   static String imgFrame391 = 'images/img_frame_39_1.png';
 }
