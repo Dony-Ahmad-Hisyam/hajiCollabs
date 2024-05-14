@@ -107,7 +107,7 @@ class DashboardScreenIDN extends StatelessWidget {
             }),
             SizedBox(width: 10.h),
             _buildCustomImageView1(ImageConstant.DashboardImgLainyaIDN, () {
-              Navigator.pushNamed(context, AppRoutes.doaNiatIDN);
+              Navigator.pushNamed(context, AppRoutes.manuAllIDN);
             }),
           ],
         ),

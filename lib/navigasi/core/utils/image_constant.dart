@@ -40,4 +40,14 @@ class ImageConstant {
   static String DashboardImgLainyaIDN = 'images/Dashboard Frame lainya.png';
   static String DashboardImgLranganIDN =
       'images/Dashboard Frame larangan ihram.png';
+  static String menuDef = 'images/menuDef.png';
+  static String menuDoa = 'images/menuDoa.png';
+  static String menuHak = 'images/menuHak.png';
+  static String menuHikk = 'images/menuHikk.png';
+  static String menuLar = 'images/menuLar.png';
+  static String menuTat = 'images/menuTat.png';
+  static String menuTatCa = 'images/menuTatCa.png';
+  static String menuVid1 = 'images/menuVid1.png';
+  static String menuVid2 = 'images/.png';
+  static String menuWaj = 'images/menuWaj.png';
 }
