@@ -14,7 +14,7 @@ class DashboardScreenIDN extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Container(
-            height: 800.h,
+            height: 675.h,
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(horizontal: 13.h),
             child: Stack(
@@ -25,16 +25,22 @@ class DashboardScreenIDN extends StatelessWidget {
                   alignment: Alignment.topCenter,
                   margin: EdgeInsets.only(bottom: 19.v),
                 ),
+                Positioned(
+                  top: 305.h,
+                  child: Image(
+                    image: AssetImage(
+                        'images/Polygon 1.png'), // Ubah path sesuai dengan path sebenarnya
+                    fit: BoxFit.cover, // Sesuaikan dengan kebutuhan
+                  ),
+                ),
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment
-                      .stretch, // Ensure the column stretches to full width
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    SizedBox(height: 80),
+                    SizedBox(height: 380), // Ubah tinggi sesuai kebutuhan
                     _buildfdefOneList(context),
-                    SizedBox(height: 4),
+                    SizedBox(height: 10),
                     _buildHakList(context),
-                    _buildWanitaOneList(context),
-                    SizedBox(height: 10.v),
+                    SizedBox(height: 10),
                     _buildHikmahList(context),
                   ],
                 ),
@@ -46,20 +52,40 @@ class DashboardScreenIDN extends StatelessWidget {
     );
   }
 
-  Widget _buildHakList(BuildContext context) {
+  Widget _buildfdefOneList(BuildContext context) {
     return SizedBox(
-      height: 100.v,
+      height: 111.v,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            _buildCustomImageView(ImageConstant.imgHak1, () {
+            SizedBox(width: 10.h),
+            _buildCustomImageView1(ImageConstant.DashboardImgDefIDN, () {
+              Navigator.pushNamed(context, AppRoutes.definisidIDN);
+            }),
+            SizedBox(width: 10.h),
+            _buildCustomImageView1(ImageConstant.DashboardImgHakIDN, () {
               Navigator.pushNamed(context, AppRoutes.hakJemaahIDN);
             }),
-            _buildCustomImageView(ImageConstant.imgWajib1, () {
-              Navigator.pushNamed(context, AppRoutes.wajibhajiIDN);
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHakList(BuildContext context) {
+    return SizedBox(
+      height: 111.v,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            SizedBox(width: 10.h),
+            _buildCustomImageView1(ImageConstant.DashboardImgDoaIDN, () {
+              Navigator.pushNamed(context, AppRoutes.doaNiatIDN);
             }),
-            _buildCustomImageView(ImageConstant.imgTata1, () {
+            SizedBox(width: 10.h),
+            _buildCustomImageView1(ImageConstant.DashboardImgUrutIDN, () {
               Navigator.pushNamed(context, AppRoutes.tatacaraIDN);
             }),
           ],
@@ -76,11 +102,11 @@ class DashboardScreenIDN extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(width: 10.h),
-            _buildCustomImageView1(ImageConstant.imgHikmah1, () {
-              Navigator.pushNamed(context, AppRoutes.hikmahIDN);
+            _buildCustomImageView1(ImageConstant.DashboardImgLranganIDN, () {
+              Navigator.pushNamed(context, AppRoutes.laranganIDN);
             }),
             SizedBox(width: 10.h),
-            _buildCustomImageView1(ImageConstant.imgDoa1, () {
+            _buildCustomImageView1(ImageConstant.DashboardImgLainyaIDN, () {
               Navigator.pushNamed(context, AppRoutes.doaNiatIDN);
             }),
           ],
@@ -111,83 +137,6 @@ class DashboardScreenIDN extends StatelessWidget {
           imagePath: imagePath,
           margin: EdgeInsets.only(),
         ),
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildWanitaOneList(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        top: 16.v,
-        right: 8.h,
-      ),
-      child: WanitaonelistItemWidget(),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildfdefOneList(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        top: 246.v,
-        right: 8.h,
-      ),
-      child: Defonelist(),
-    );
-  }
-}
-
-class WanitaonelistItemWidget extends StatelessWidget {
-  const WanitaonelistItemWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: Column(
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, AppRoutes.tataHajiWanitaIDN);
-            },
-            child: CustomImageView(
-              imagePath: ImageConstant.imgWanita1,
-            ),
-          ),
-          SizedBox(height: 16.v),
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, AppRoutes.laranganIDN);
-            },
-            child: CustomImageView(
-              imagePath: ImageConstant.imgIhram1,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Defonelist extends StatelessWidget {
-  const Defonelist({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: Column(
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, AppRoutes.definisidIDN);
-            },
-            child: CustomImageView(
-              imagePath: ImageConstant.imgDef1,
-            ),
-          ),
-        ],
       ),
     );
   }

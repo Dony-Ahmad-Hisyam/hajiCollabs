@@ -33,4 +33,11 @@ class ImageConstant {
   static String imgDoaen = 'images/DE8.png';
   static String page_2_option_3 = 'images/dbee.png';
   static String imgFrame391 = 'images/img_frame_39_1.png';
+  static String DashboardImgDefIDN = 'images/definisi';
+  static String DashboardImgHakIDN = 'images/Dashboard Frame hak jemaah.png';
+  static String DashboardImgUrutIDN = 'images/Dashboard Frame Urutan haji.png';
+  static String DashboardImgDoaIDN = 'images/Dashboard Frame doa niat.png';
+  static String DashboardImgLainyaIDN = 'images/Dashboard Frame lainya.png';
+  static String DashboardImgLranganIDN =
+      'images/Dashboard Frame larangan ihram.png';
 }
