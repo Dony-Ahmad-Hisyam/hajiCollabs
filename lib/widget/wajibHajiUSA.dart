@@ -29,15 +29,15 @@ class _wajibHajiUSAPageState extends State<wajibHajiUSAPage> {
       body: Stack(
         children: [
           Positioned.fill(
-            top: 0.1,
+            top: 0,
             child: Image.asset(
-              'images/whusa.png',
+              'images/whusa3.png',
               alignment: Alignment.topCenter,
             ),
           ),
           // Kotak isi deskripsi
           Positioned.fill(
-            top: MediaQuery.of(context).size.height * 0.56,
+            top: MediaQuery.of(context).size.height * 0.60,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: Container(

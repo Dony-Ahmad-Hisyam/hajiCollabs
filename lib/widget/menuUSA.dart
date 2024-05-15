@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:haji/widget/definisiIDN.dart';
-import 'package:haji/widget/doaNiatIDN.dart';
-import 'package:haji/widget/hakJemaahIDN.dart';
-import 'package:haji/widget/hikmahIDN.dart';
-import 'package:haji/widget/laranganIhramIDN.dart';
-import 'package:haji/widget/menuUSA.dart';
+import 'package:haji/widget/definisiUSA.dart';
+import 'package:haji/widget/doaNiatUSA.dart';
+import 'package:haji/widget/hakJemaahUSA.dart';
+import 'package:haji/widget/hikmahUSA.dart';
+import 'package:haji/widget/laranganIhramUSA.dart';
 import 'package:haji/widget/tataCaraIDN.dart';
+import 'package:haji/widget/tataCaraUSA.dart';
 import 'package:haji/widget/tataHajiWanitaIDN.dart';
-import 'package:haji/widget/wajibHajiIDN.dart';
+import 'package:haji/widget/tataHajiWanitaUSA.dart';
+import 'package:haji/widget/wajibHajiUSA.dart';
 
-class MenuIDNPages extends StatefulWidget {
-  const MenuIDNPages({Key? key}) : super(key: key);
+class menuUSAPages extends StatefulWidget {
+  const menuUSAPages({Key? key}) : super(key: key);
 
   @override
-  State<MenuIDNPages> createState() => _MenuIDNPagesState();
+  State<menuUSAPages> createState() => _menuUSAPagesState();
 }
 
-class _MenuIDNPagesState extends State<MenuIDNPages> {
+class _menuUSAPagesState extends State<menuUSAPages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,46 +44,50 @@ class _MenuIDNPagesState extends State<MenuIDNPages> {
               padding: const EdgeInsets.only(top: 60, left: 16),
             ),
             _buildImageContainerWithTitle(
-              'Definisi dan Konsep Haji',
+              'Definition and Concept of Hajj',
               [
-                'images/menuDef.png',
-                'images/menuHak.png',
-                'images/menuWaj.png'
-              ],
-              context,
-              targetPages: [definisiPage(), hakjemaahidn(), wajibHajiPage()],
-            ),
-            _buildImageContainerWithTitle(
-              'Tata Cara Pelaksanaan Haji',
-              [
-                'images/menuTat.png',
-                'images/menuTatCa.png',
-                'images/menuLar.png'
+                'images/menuDef2.png',
+                'images/menuHak2.png',
+                'images/menuWaj2.png'
               ],
               context,
               targetPages: [
-                TataCaraIDNPage(),
-                CaraWanitaPage(),
-                laranganIhramPage()
+                defisiniUSAPage(),
+                hakjemaahusa(),
+                wajibHajiUSAPage()
               ],
             ),
             _buildImageContainerWithTitle(
-              'Hikmah dan Do’a Haji',
+              'Procedures for Performing Hajj',
               [
-                'images/menuHikk.png',
-                'images/menuDoa.png',
+                'images/menuTat2.png',
+                'images/menuTatCa2.png',
+                'images/menuLar2.png'
               ],
               context,
-              targetPages: [hikmahidn(), DoaNiatIDNPage()],
+              targetPages: [
+                TataCaraUSAPage(),
+                CaraWanitaEngPage(),
+                prohibitionsOfIhramPage()
+              ],
             ),
             _buildImageContainerWithTitle(
-              'Video Tutorial',
+              'Wisdom and Prayers for Hajj',
               [
-                'images/menuVid1.png',
-                'images/menuVid2.png',
+                'images/meneHik2.png',
+                'images/menuDoa2.png',
               ],
               context,
-              targetPages: [menuUSAPages(), CaraWanitaPage()],
+              targetPages: [hikmahusa(), DoaNiatUSAPage()],
+            ),
+            _buildImageContainerWithTitle(
+              'Video Tutorials',
+              [
+                'images/menuVid3.png',
+                'images/menuVid4.png',
+              ],
+              context,
+              targetPages: [TataCaraIDNPage(), CaraWanitaPage()],
             ),
           ],
         ),
