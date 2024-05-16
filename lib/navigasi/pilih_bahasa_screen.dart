@@ -36,16 +36,21 @@ class _PilihBahasaScreenState extends State<PilihBahasaScreen> {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
-                  height: 450,
+                  height: 750,
                   width: double.maxFinite,
                   child: Stack(
                     alignment: Alignment.bottomRight,
                     children: [
-                      CustomImageView(
-                        imagePath: ImageConstant.imgFireflyIllustration,
-                        height: 462.v,
-                        width: 360.h,
-                        alignment: Alignment.center,
+                      Padding(
+                        padding: EdgeInsets.only(top: 80.h),
+                       child: Transform.translate(
+    offset: Offset(0, 50.h), // Adjust the value to move the image downwards
+    child: CustomImageView(
+      imagePath: ImageConstant.imgFireflyIllustration,
+      height: 750.v,
+      width: 360.h,
+      alignment: Alignment.center,)
+                          ),
                       ),
                       CustomOutlinedButton(
                         width: 100,

@@ -3,7 +3,7 @@ class ImageConstant {
   static String imagePath = 'images';
 
   // Pilih Bahasa images
-  static String imgFireflyIllustration = 'images/img_firefly_illustration.png';
+  static String imgFireflyIllustration = 'images/dashboardimg.png';
 
   static String imgArrowleft = 'images/img_arrowleft.svg';
 
