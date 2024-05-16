@@ -12,28 +12,50 @@ class DashboardScreenUSA extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          leading: IconButton(
+            icon: Icon(
+              Icons.chevron_left,
+              size: 40,
+              color: Color(0xFF235092),
+            ),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
         body: SingleChildScrollView(
           child: Container(
-            height: 800.h, // Set the height of the container
+            height: 675.h,
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(horizontal: 13.h),
             child: Stack(
               alignment: Alignment.bottomCenter,
               children: [
                 CustomImageView(
-                  imagePath: ImageConstant.page_2_option_3,
+                  imagePath: ImageConstant.dashboardimgUSA,
                   alignment: Alignment.topCenter,
                   margin: EdgeInsets.only(bottom: 19.v),
+                ),
+                Positioned(
+                  top: 305.h,
+                  child: Image(
+                    image: AssetImage(
+                        'images/Polygon 1.png'), // Ubah path sesuai dengan path sebenarnya
+                    fit: BoxFit.cover, // Sesuaikan dengan kebutuhan
+                  ),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    SizedBox(height: 80),
+                    SizedBox(height: 380), // Ubah tinggi sesuai kebutuhan
                     _buildfdefOneList(context),
-                    SizedBox(height: 4),
+                    SizedBox(height: 10),
                     _buildHakList(context),
-                    _buildWanitaOneList(context),
-                    SizedBox(height: 10.v),
+                    SizedBox(height: 10),
                     _buildHikmahList(context),
                   ],
                 ),
@@ -45,20 +67,40 @@ class DashboardScreenUSA extends StatelessWidget {
     );
   }
 
-  Widget _buildHakList(BuildContext context) {
+  Widget _buildfdefOneList(BuildContext context) {
     return SizedBox(
-      height: 100.v,
+      height: 111.v,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            _buildCustomImageView(ImageConstant.imgHaken, () {
+            SizedBox(width: 10.h),
+            _buildCustomImageView1(ImageConstant.dashboardImgDefUSA, () {
+              Navigator.pushNamed(context, AppRoutes.definisidUSA);
+            }),
+            SizedBox(width: 10.h),
+            _buildCustomImageView1(ImageConstant.dashboardImgHakUSA, () {
               Navigator.pushNamed(context, AppRoutes.hakJemaahUSA);
             }),
-            _buildCustomImageView(ImageConstant.imgWajiben, () {
-              Navigator.pushNamed(context, AppRoutes.wajibhajiUSA);
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHakList(BuildContext context) {
+    return SizedBox(
+      height: 111.v,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            SizedBox(width: 10.h),
+            _buildCustomImageView1(ImageConstant.dashboardImgDoaUSA, () {
+              Navigator.pushNamed(context, AppRoutes.doaNiatUSA);
             }),
-            _buildCustomImageView(ImageConstant.imgTataen, () {
+            SizedBox(width: 10.h),
+            _buildCustomImageView1(ImageConstant.dashboardImgUrutUSA, () {
               Navigator.pushNamed(context, AppRoutes.tataCaraUSA);
             }),
           ],
@@ -74,12 +116,13 @@ class DashboardScreenUSA extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            _buildCustomImageView1(ImageConstant.imgHikmahen, () {
-              Navigator.pushNamed(context, AppRoutes.hikmahUSA);
+            SizedBox(width: 10.h),
+            _buildCustomImageView1(ImageConstant.dashboardImgLranganUSA, () {
+              Navigator.pushNamed(context, AppRoutes.laranganUSA);
             }),
             SizedBox(width: 10.h),
-            _buildCustomImageView1(ImageConstant.imgDoaen, () {
-              Navigator.pushNamed(context, AppRoutes.doaNiatUSA);
+            _buildCustomImageView1(ImageConstant.dashboardImgLainyaUSA, () {
+              Navigator.pushNamed(context, AppRoutes.manuAllIDN);
             }),
           ],
         ),
@@ -109,83 +152,6 @@ class DashboardScreenUSA extends StatelessWidget {
           imagePath: imagePath,
           margin: EdgeInsets.only(),
         ),
-      ),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildWanitaOneList(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        top: 16.v,
-        right: 8.h,
-      ),
-      child: WanitaonelistItemWidget(),
-    );
-  }
-
-  /// Section Widget
-  Widget _buildfdefOneList(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        top: 246.v,
-        right: 8.h,
-      ),
-      child: Defonelist(),
-    );
-  }
-}
-
-class WanitaonelistItemWidget extends StatelessWidget {
-  const WanitaonelistItemWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: Column(
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, AppRoutes.tataHajiWanitaUSA);
-            },
-            child: CustomImageView(
-              imagePath: ImageConstant.imgWanitaen,
-            ),
-          ),
-          SizedBox(height: 16.v),
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, AppRoutes.laranganUSA);
-            },
-            child: CustomImageView(
-              imagePath: ImageConstant.imgIhramen,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Defonelist extends StatelessWidget {
-  const Defonelist({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: Column(
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, AppRoutes.definisidUSA);
-            },
-            child: CustomImageView(
-              imagePath: ImageConstant.imgDefen,
-            ),
-          )
-        ],
       ),
     );
   }

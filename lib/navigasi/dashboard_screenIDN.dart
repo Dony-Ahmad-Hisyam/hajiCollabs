@@ -12,6 +12,21 @@ class DashboardScreenIDN extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          leading: IconButton(
+            icon: Icon(
+              Icons.chevron_left,
+              size: 40,
+              color: Color(0xFF235092),
+            ),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
         body: SingleChildScrollView(
           child: Container(
             height: 675.h,
@@ -21,22 +36,21 @@ class DashboardScreenIDN extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               children: [
                 CustomImageView(
-                  imagePath: ImageConstant.imgFrame391,
+                  imagePath: ImageConstant.dashboardimgIDN,
                   alignment: Alignment.topCenter,
                   margin: EdgeInsets.only(bottom: 19.v),
                 ),
                 Positioned(
                   top: 305.h,
                   child: Image(
-                    image: AssetImage(
-                        'images/Polygon 1.png'), // Ubah path sesuai dengan path sebenarnya
-                    fit: BoxFit.cover, // Sesuaikan dengan kebutuhan
+                    image: AssetImage('images/Polygon 1.png'),
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    SizedBox(height: 380), // Ubah tinggi sesuai kebutuhan
+                    SizedBox(height: 380),
                     _buildfdefOneList(context),
                     SizedBox(height: 10),
                     _buildHakList(context),
@@ -60,11 +74,11 @@ class DashboardScreenIDN extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(width: 10.h),
-            _buildCustomImageView1(ImageConstant.DashboardImgDefIDN, () {
+            _buildCustomImageView1(ImageConstant.dashboardImgDefIDN, () {
               Navigator.pushNamed(context, AppRoutes.definisidIDN);
             }),
             SizedBox(width: 10.h),
-            _buildCustomImageView1(ImageConstant.DashboardImgHakIDN, () {
+            _buildCustomImageView1(ImageConstant.dashboardImgHakIDN, () {
               Navigator.pushNamed(context, AppRoutes.hakJemaahIDN);
             }),
           ],
@@ -81,11 +95,11 @@ class DashboardScreenIDN extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(width: 10.h),
-            _buildCustomImageView1(ImageConstant.DashboardImgDoaIDN, () {
+            _buildCustomImageView1(ImageConstant.dashboardImgDoaIDN, () {
               Navigator.pushNamed(context, AppRoutes.doaNiatIDN);
             }),
             SizedBox(width: 10.h),
-            _buildCustomImageView1(ImageConstant.DashboardImgUrutIDN, () {
+            _buildCustomImageView1(ImageConstant.dashboardImgUrutIDN, () {
               Navigator.pushNamed(context, AppRoutes.tatacaraIDN);
             }),
           ],
@@ -102,11 +116,11 @@ class DashboardScreenIDN extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(width: 10.h),
-            _buildCustomImageView1(ImageConstant.DashboardImgLranganIDN, () {
+            _buildCustomImageView1(ImageConstant.dashboardImgLranganIDN, () {
               Navigator.pushNamed(context, AppRoutes.laranganIDN);
             }),
             SizedBox(width: 10.h),
-            _buildCustomImageView1(ImageConstant.DashboardImgLainyaIDN, () {
+            _buildCustomImageView1(ImageConstant.dashboardImgLainyaIDN, () {
               Navigator.pushNamed(context, AppRoutes.manuAllIDN);
             }),
           ],
