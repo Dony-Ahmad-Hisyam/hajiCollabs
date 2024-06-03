@@ -120,17 +120,16 @@ class _VideotutorialPagesState extends State<VideotutorialHajiEngPages> {
                     Text(
                       'Other Videos',
                       style: TextStyle(
-                        fontSize: 25,
-                        fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        shadows: [
-                          Shadow(
-                            blurRadius: 2,
-                            color: Colors.black,
-                          )
-                        ]
-                      ),
+                          fontSize: 25,
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          shadows: [
+                            Shadow(
+                              blurRadius: 2,
+                              color: Colors.black,
+                            )
+                          ]),
                     ),
                     SizedBox(height: 20),
                     ListView.builder(

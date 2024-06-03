@@ -8,6 +8,8 @@ import 'package:haji/widget/tataCaraIDN.dart';
 import 'package:haji/widget/tataCaraUSA.dart';
 import 'package:haji/widget/tataHajiWanitaIDN.dart';
 import 'package:haji/widget/tataHajiWanitaUSA.dart';
+import 'package:haji/widget/video_tutorial_haji_eng.dart';
+import 'package:haji/widget/video_tutorial_transportasi_eng.dart';
 import 'package:haji/widget/wajibHajiUSA.dart';
 
 class menuUSAPages extends StatefulWidget {
@@ -87,7 +89,10 @@ class _menuUSAPagesState extends State<menuUSAPages> {
                 'images/menuVid4.png',
               ],
               context,
-              targetPages: [TataCaraIDNPage(), CaraWanitaPage()],
+              targetPages: [
+                VideotutorialHajiEngPages(),
+                VideotutorialTransportasiEngPages()
+              ],
             ),
           ],
         ),
@@ -99,7 +104,7 @@ class _menuUSAPagesState extends State<menuUSAPages> {
     String title,
     List<String> imagePaths,
     BuildContext context, {
-    List<Widget>? targetPages, // Mengubah parameter menjadi List<Widget>
+    List<Widget>? targetPages,
   }) {
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16, top: 20),

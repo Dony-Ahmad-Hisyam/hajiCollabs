@@ -71,14 +71,13 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                   text:
                                       'Larangan Ihram', // Teks pertama yang akan dibuat tebal
                                   style: TextStyle(
-                                    fontWeight: FontWeight
-                                        .bold, // Membuat teks pertama menjadi tebal
-                                  ),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16),
                                 ),
                                 TextSpan(
-                                  text:
-                                      ' adalah hal-hal yang tidak boleh dilakukan oleh orang yang sedang ihram, baik saat haji maupun umrah. Tujuannya untuk menjaga kesucian dan kekhusyukan ibadah.\n\nJika seseorang melanggar salah satu larangan maka ia wajib membayar fidyah. Fidyah adalah denda yang harus dibayar untuk menebus pelanggaran larangan ihram.\n\nJika pelanggaran larangan ihram dilakukan dengan sengaja, maka fidyah harus dibayar dua kali lipat. Sehingga penting untuk kamu mengetahui apa saja larangan ihram bagi perempuan dan laki-laki.',
-                                ),
+                                    text:
+                                        ' adalah hal-hal yang tidak boleh dilakukan oleh orang yang sedang ihram, baik saat haji maupun umrah. Tujuannya untuk menjaga kesucian dan kekhusyukan ibadah.\n\nJika seseorang melanggar salah satu larangan maka ia wajib membayar fidyah. Fidyah adalah denda yang harus dibayar untuk menebus pelanggaran larangan ihram.\n\nJika pelanggaran larangan ihram dilakukan dengan sengaja, maka fidyah harus dibayar dua kali lipat. Sehingga penting untuk kamu mengetahui apa saja larangan ihram bagi perempuan dan laki-laki.',
+                                    style: TextStyle(fontSize: 16)),
                               ],
                             ),
                           ),
@@ -96,7 +95,7 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'Mochiy Pop One',
                                     foreground: Paint()
@@ -121,7 +120,7 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'Mochiy Pop One',
                                     color: Colors.white,
@@ -137,7 +136,7 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                 fontFamily: 'MontserratRomanBold',
                                 color: Color(0xFF235092),
                                 fontSize:
-                                    12, // Mengatur ukuran teks secara umum
+                                    16, // Mengatur ukuran teks secara umum
                                 shadows: [
                                   Shadow(
                                     blurRadius: 2,
@@ -193,7 +192,7 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'Mochiy Pop One',
                                     foreground: Paint()
@@ -218,7 +217,7 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'Mochiy Pop One',
                                     color: Colors.white,
@@ -234,7 +233,7 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                 fontFamily: 'MontserratRomanBold',
                                 color: Color(0xFF235092),
                                 fontSize:
-                                    12, // Mengatur ukuran teks secara umum
+                                    16, // Mengatur ukuran teks secara umum
                                 shadows: [
                                   Shadow(
                                     blurRadius: 2,
@@ -248,9 +247,8 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                   text:
                                       'Larangan Ihram bagi perempuan', // Teks pertama yang akan dibuat tebal
                                   style: TextStyle(
-                                    fontWeight: FontWeight
-                                        .bold, // Membuat teks pertama menjadi tebal
-                                  ),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16),
                                 ),
                                 TextSpan(
                                   text:
@@ -271,7 +269,7 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'Mochiy Pop One',
                                     foreground: Paint()
@@ -296,7 +294,7 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'Mochiy Pop One',
                                     color: Colors.white,
@@ -319,7 +317,7 @@ class _laranganIhramPageState extends State<laranganIhramPage> {
                                 fontFamily: 'MontserratRomanBold',
                                 color: Color(0xFF235092),
                                 fontSize:
-                                    12, // Mengatur ukuran teks secara umum
+                                    16, // Mengatur ukuran teks secara umum
                                 shadows: [
                                   Shadow(
                                     blurRadius: 2,

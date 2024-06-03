@@ -97,14 +97,7 @@ class CaraWanitaEngPage extends StatelessWidget {
                                       color: Color(0xFF235092),
                                       fontWeight: FontWeight.bold,
                                       fontSize:
-                                          18, // Ukuran font diperbesar menjadi 18
-                                      shadows: [
-                                        Shadow(
-                                          blurRadius: 5, // Radius bayangan
-                                          color: Colors.black.withOpacity(0.2), // Warna bayangan
-                                          offset: Offset(0, 3), // Penyimpangan bayangan
-                                        ),
-                                      ],
+                                          16, // Ukuran font diperbesar menjadi 18
                                     ),
                                   ),
                                 ),
@@ -125,12 +118,13 @@ class CaraWanitaEngPage extends StatelessWidget {
                         "Female pilgrims can also observe the sacred pause (tatabbu' al-naqa'). When menstrual blood does not come out and it is estimated that there is enough time for tawaf, then immediately take a shower, wear sanitary napkins, and perform tawaf ifadah and sa'i. If blood comes out again after the tawaf, the tawaf is valid and no fine is imposed.",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20, // Ukuran font diperbesar menjadi 20
+                          fontSize: 16, // Ukuran font diperbesar menjadi 20
                           fontWeight: FontWeight.bold,
                           shadows: [
                             Shadow(
                               blurRadius: 5, // Radius bayangan
-                              color: Colors.black.withOpacity(0.2), // Warna bayangan
+                              color: Colors.black
+                                  .withOpacity(0.2), // Warna bayangan
                               offset: Offset(0, 3), // Penyimpangan bayangan
                             ),
                           ],
@@ -139,7 +133,7 @@ class CaraWanitaEngPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  
+
                   ListView.builder(
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
@@ -159,12 +153,14 @@ class CaraWanitaEngPage extends StatelessWidget {
                                 color: Color(0xFF235092),
                                 fontWeight: FontWeight.bold,
                                 fontSize:
-                                    18, // Ukuran font diperbesar menjadi 18
+                                    16, // Ukuran font diperbesar menjadi 18
                                 shadows: [
                                   Shadow(
                                     blurRadius: 5, // Radius bayangan
-                                    color: Colors.black.withOpacity(0.2), // Warna bayangan
-                                    offset: Offset(0, 3), // Penyimpangan bayangan
+                                    color: Colors.black
+                                        .withOpacity(0.2), // Warna bayangan
+                                    offset:
+                                        Offset(0, 3), // Penyimpangan bayangan
                                   ),
                                 ],
                               ),

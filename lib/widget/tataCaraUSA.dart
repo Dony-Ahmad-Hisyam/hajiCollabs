@@ -51,7 +51,7 @@ class TataCaraUSAPage extends StatelessWidget {
                         child: Text(
                           steps[index],
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 16,
                             color: Color(0xFF235092),
                           ),
                         ),

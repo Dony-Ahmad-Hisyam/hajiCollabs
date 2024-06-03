@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:haji/navigasi/core/app_export.dart';
 import 'package:haji/widget/menuIDN.dart';
+import 'package:haji/widget/menuUSA.dart';
 import '../pilih_bahasa_screen.dart';
 import '../dashboard_screenIDN.dart';
 import '../dashboard_screenUSA.dart';
@@ -42,6 +43,7 @@ class AppRoutes {
   static const String tataHajiWanitaIDN = '/tataHajiWanitaIDN';
   static const String tataHajiWanitaUSA = '/tataHajiWanitaEng';
   static const String manuAllIDN = '/menuIDN';
+  static const String menuUSA = '/menuUSA';
 
   static Map<String, WidgetBuilder> routes = {
     dashboardIDN: (context) => DashboardScreenIDN(),
@@ -64,5 +66,6 @@ class AppRoutes {
     tataHajiWanitaIDN: (context) => CaraWanitaPage(),
     tataHajiWanitaUSA: (context) => CaraWanitaEngPage(),
     manuAllIDN: (context) => MenuIDNPages(),
+    menuUSA: (context) => menuUSAPages(),
   };
 }

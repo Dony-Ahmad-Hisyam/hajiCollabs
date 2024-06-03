@@ -62,13 +62,12 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                               TextSpan(
                                 text: 'Prohibitions of Ihram',
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                    fontWeight: FontWeight.bold, fontSize: 16),
                               ),
                               TextSpan(
-                                text:
-                                    ' are things that are not allowed to be done by people in ihram, both during Hajj and Umrah. The purpose is to maintain the sanctity and devotion of worship.\n\nIf someone violates one of the prohibitions, they must pay fidyah. Fidyah is a fine that must be paid to atone for the violation of ihram prohibitions.\n\nIf the violation of ihram prohibitions is done intentionally, then fidyah must be paid twice. So it is important for you to know what are the prohibitions of ihram for women and men.',
-                              ),
+                                  text:
+                                      ' are things that are not allowed to be done by people in ihram, both during Hajj and Umrah. The purpose is to maintain the sanctity and devotion of worship.\n\nIf someone violates one of the prohibitions, they must pay fidyah. Fidyah is a fine that must be paid to atone for the violation of ihram prohibitions.\n\nIf the violation of ihram prohibitions is done intentionally, then fidyah must be paid twice. So it is important for you to know what are the prohibitions of ihram for women and men.',
+                                  style: TextStyle(fontSize: 16)),
                             ],
                           ),
                         ),
@@ -82,7 +81,7 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Mochiy Pop One',
                                   foreground: Paint()
@@ -106,7 +105,7 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Mochiy Pop One',
                                   color: Colors.white,
@@ -121,7 +120,7 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                             style: TextStyle(
                               fontFamily: 'MontserratRomanBold',
                               color: Color(0xFF235092),
-                              fontSize: 12,
+                              fontSize: 16,
                               shadows: [
                                 Shadow(
                                   blurRadius: 2,
@@ -172,7 +171,7 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Mochiy Pop One',
                                   foreground: Paint()
@@ -196,7 +195,7 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Mochiy Pop One',
                                   color: Colors.white,
@@ -211,7 +210,7 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                             style: TextStyle(
                               fontFamily: 'MontserratRomanBold',
                               color: Color(0xFF235092),
-                              fontSize: 12,
+                              fontSize: 16,
                               shadows: [
                                 Shadow(
                                   blurRadius: 2,
@@ -224,8 +223,7 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                               TextSpan(
                                 text: 'Prohibitions of Ihram for women',
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                    fontWeight: FontWeight.bold, fontSize: 16),
                               ),
                               TextSpan(
                                 text:
@@ -244,7 +242,7 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Mochiy Pop One',
                                   foreground: Paint()
@@ -268,7 +266,7 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Mochiy Pop One',
                                   color: Colors.white,
@@ -290,7 +288,7 @@ class _prohibitionsOfIhramPageState extends State<prohibitionsOfIhramPage> {
                             style: TextStyle(
                               fontFamily: 'MontserratRomanBold',
                               color: Color(0xFF235092),
-                              fontSize: 12,
+                              fontSize: 16,
                               shadows: [
                                 Shadow(
                                   blurRadius: 2,

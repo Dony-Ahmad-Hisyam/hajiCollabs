@@ -59,12 +59,12 @@ class _wajibHajiPageState extends State<wajibHajiPage> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        "\tSebelum masuk ke tata cara berhaji yang akan dipelajari di manasik haji, kita pahami dulu mengenai wajib haji. Dilansir dari walisongo.ac.id, wajib haji adalah semua yang harus dilakukan saat berhaji. Jika ditinggalkan, maka harus membayar dam (denda). Tujuh wajib haji tersebut adalah sebagai berikut.\n1. Ihram dari miqat.\n2. Wukuf di Arafah.\n3. Mabit atau bermalam di Muzdalifah pada \n    tanggal 9 Dzulhijjah.\n4. Mabit atau bermalam di Mina pada hari \n    tasyrik ( 11,12,13 Dzulhijjah ).\n5. Tahallul / mencukur rambut.\n6. Melempar jumrah.\n7. Tawaf Wada’",
+                        "\tSebelum masuk ke tata cara berhaji yang akan dipelajari di manasik haji, kita pahami dulu mengenai wajib haji. Dilansir dari walisongo.ac.id, wajib haji adalah semua yang harus dilakukan saat berhaji. Jika ditinggalkan, maka harus membayar dam (denda). Tujuh wajib haji tersebut adalah sebagai berikut.\n1. Ihram dari miqat.\n2. Wukuf di Arafah.\n3. Mabit atau bermalam di Muzdalifah pada tanggal 9 Dzulhijjah.\n4. Mabit atau bermalam di Mina pada hari \n    tasyrik ( 11,12,13 Dzulhijjah ).\n5. Tahallul / mencukur rambut.\n6. Melempar jumrah.\n7. Tawaf Wada’",
                         style: TextStyle(
-                          fontFamily: 'MontserratRomanBold',
-                          color: Color(0xFF235092),
-                          fontWeight: FontWeight.bold,
-                        ),
+                            fontFamily: 'MontserratRomanBold',
+                            color: Color(0xFF235092),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16),
                       ),
                     ],
                   ),

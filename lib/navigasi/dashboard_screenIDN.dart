@@ -41,7 +41,7 @@ class DashboardScreenIDN extends StatelessWidget {
                   margin: EdgeInsets.only(bottom: 19.v),
                 ),
                 Positioned(
-                  top: 305.h,
+                  top: 280.h,
                   child: Image(
                     image: AssetImage('images/Polygon 1.png'),
                     fit: BoxFit.cover,
@@ -50,7 +50,7 @@ class DashboardScreenIDN extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    SizedBox(height: 380),
+                    SizedBox(height: 350),
                     _buildfdefOneList(context),
                     SizedBox(height: 10),
                     _buildHakList(context),
@@ -60,6 +60,34 @@ class DashboardScreenIDN extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+        ),
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            color: Color(0xFF48D8E8),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: const Offset(0, -3),
+              ),
+            ],
+          ),
+          height: kToolbarHeight,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, AppRoutes.definisidIDN);
+                },
+                child: Image.asset(
+                  'images/camera.png',
+                  height: 50,
+                ),
+              ),
+            ],
           ),
         ),
       ),
