@@ -37,6 +37,7 @@ class _hakjemaahidnState extends State<hakjemaahidn> {
                   fit: BoxFit.cover,
                   alignment: Alignment.topCenter,
                 ),
+                SizedBox(height: 20), // Added spacing between image and text
               ],
             ),
           ),
@@ -53,12 +54,14 @@ class _hakjemaahidnState extends State<hakjemaahidn> {
                         children: [
                           // RichText dengan konten deskripsi
                           RichText(
+                            textAlign: TextAlign
+                                .justify, // Text alignment set to justify
                             text: TextSpan(
                               style: TextStyle(
                                 fontFamily: 'MontserratRomanBold',
                                 color: Color(0xFF235092),
                                 fontSize:
-                                    12, // Mengatur ukuran teks secara umum
+                                    16, // Mengatur ukuran teks secara umum
                                 shadows: [
                                   Shadow(
                                     blurRadius: 2,
@@ -70,75 +73,35 @@ class _hakjemaahidnState extends State<hakjemaahidn> {
                               children: [
                                 TextSpan(
                                   text:
-                                      'Larangan Ihram', // Teks pertama yang akan dibuat tebal
+                                      'Kepala Kantor Kementerian Agama Anambas, Dr. H. Erizal, MH menjelaskan mengenai Hak Dan Kewajiban Jemaah Haji.\n\nDalam pembahasan materi Dr. H. Erizal, MH menyampaikan: Hak Jemaah Haji dalam ',
+                                ),
+                                TextSpan(
+                                  text:
+                                      'Undang-Undang Nomor 8 tahun 2019 tentang Penyelenggaraan Haji dan Umrah terdapat pada pasal 6,', // Teks pertama yang akan dibuat tebal
                                   style: TextStyle(
                                     fontWeight: FontWeight
                                         .bold, // Membuat teks pertama menjadi tebal
                                   ),
                                 ),
                                 TextSpan(
-                                  text:
-                                      ' adalah hal-hal yang tidak boleh dilakukan oleh orang yang sedang ihram, baik saat haji maupun umrah. Tujuannya untuk menjaga kesucian dan kekhusyukan ibadah.\n\nJika seseorang melanggar salah satu larangan maka ia wajib membayar fidyah. Fidyah adalah denda yang harus dibayar untuk menebus pelanggaran larangan ihram.\n\nJika pelanggaran larangan ihram dilakukan dengan sengaja, maka fidyah harus dibayar dua kali lipat. Sehingga penting untuk kamu mengetahui apa saja larangan ihram bagi perempuan dan laki-laki.',
+                                  text: ' meliputi:',
                                 ),
                               ],
                             ),
                           ),
                           SizedBox(
                               height:
-                                  25), // Memberikan jarak antara RichText dan Stack
+                                  20), // Memberikan jarak antara RichText dan Stack
                           // Stack untuk menampilkan teks dengan stroke dan teks utama
-                          Stack(
-                            children: [
-                              // Teks dengan stroke
-                              Container(
-                                child: Text(
-                                  'Larangan Ihram Bagi Laki-laki dan Perempuan',
-                                  maxLines: null,
-                                  overflow: TextOverflow.ellipsis,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Mochiy Pop One',
-                                    foreground: Paint()
-                                      ..style = PaintingStyle.stroke
-                                      ..color = Color(0xFF235092)
-                                      ..strokeWidth = 4,
-                                    shadows: [
-                                      Shadow(
-                                        blurRadius: 12,
-                                        color: Colors.black.withOpacity(1.0),
-                                        offset: Offset(0, 3),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              // Teks utama (berwarna hitam)
-                              Container(
-                                child: Text(
-                                  'Larangan Ihram Bagi Laki-laki dan Perempuan',
-                                  maxLines: null,
-                                  overflow: TextOverflow.ellipsis,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Mochiy Pop One',
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 5),
                           RichText(
+                            textAlign: TextAlign
+                                .justify, // Text alignment set to justify
                             text: TextSpan(
                               style: TextStyle(
                                 fontFamily: 'MontserratRomanBold',
                                 color: Color(0xFF235092),
                                 fontSize:
-                                    12, // Mengatur ukuran teks secara umum
+                                    16, // Mengatur ukuran teks secara umum
                                 shadows: [
                                   Shadow(
                                     blurRadius: 2,
@@ -150,202 +113,100 @@ class _hakjemaahidnState extends State<hakjemaahidn> {
                               children: [
                                 TextSpan(
                                   text:
-                                      '1. Memotong atau mencabut rambut, bulu, atau kuku\n',
+                                      '1. Mendapat bukti setoran dari BPS Bipih dan\n    Nomor Porsi dari Menteris\n',
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                      height:
+                                          25), // Add spacing between TextSpans
                                 ),
                                 TextSpan(
                                   text:
-                                      '2. Memakai wewangian kecuali yang sudah dipakai sebelum\n    melakukan niat ihram.\n',
+                                      '2. Mendapat bimbingan manasik haji dan\n    materi lainnya di tanah air, dalam\n    perjalanan , dan Arab Saudi\n',
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                      height:
+                                          25), // Add spacing between TextSpans
                                 ),
                                 TextSpan(
                                   text:
-                                      '3. Berburu dan memakan hewan hasil buruan\n',
+                                      '3. Mendapat pelayanan akomodasi, konsumsi\n    dan Kesehatan\n',
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                      height:
+                                          25), // Add spacing between TextSpans
+                                ),
+                                TextSpan(
+                                  text: '4. Mendapat pelayanan transportasi\n',
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                      height:
+                                          25), // Add spacing between TextSpans
                                 ),
                                 TextSpan(
                                   text:
-                                      '4. Melakukan hubungan seks dan yang mengundang syahwat\n',
+                                      '5. Mendapat pelindungan sebagai jamaah haji\n    Indonesia\n',
                                 ),
-                                TextSpan(
-                                  text: '5. Melakukan kejahatan dan maksiat\n',
-                                ),
-                                TextSpan(
-                                  text: '6. Bertengkar atau berkelahi\n',
-                                ),
-                                TextSpan(
-                                  text:
-                                      '7. Mengucapkan kata-kata kotor atau mencaci.\n',
+                                WidgetSpan(
+                                  child: SizedBox(
+                                      height:
+                                          25), // Add spacing between TextSpans
                                 ),
                                 TextSpan(
                                   text:
-                                      '8. Dilarang menikah, menikahkan ataupun meminang untuk dinikahi.\n',
+                                      '6. Mendapat informasi pelaksanaan Ibadah\n    Haji\n',
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                      height:
+                                          25), // Add spacing between TextSpans
+                                ),
+                                TextSpan(
+                                  text:
+                                      '7. Mendapat asuransi jiwa sesuai dengan\n    syariat\n',
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                      height:
+                                          25), // Add spacing between TextSpans
+                                ),
+                                TextSpan(
+                                  text:
+                                      '8. Mendapat identitas haji dan dokumen\n    lainnya yang diperlukan untuk pelaksanaan\n    Ibadah Haji\n',
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                      height:
+                                          25), // Add spacing between TextSpans
+                                ),
+                                TextSpan(
+                                  text:
+                                      '9. Memilih PIHK untuk Jemaah Haji Khusus\n',
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                      height:
+                                          25), // Add spacing between TextSpans
+                                ),
+                                TextSpan(
+                                  text:
+                                      '10. Mendapat pelayanan khusus bagi Jemaah\n       Haji penyandang disabilitas\n',
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                      height:
+                                          25), // Add spacing between TextSpans
+                                ),
+                                TextSpan(
+                                  text:
+                                      '11. Melimpahkan nomor porsi kepada suami,\n       istri, ayah, ibu, anak kandung atau saudara\n       kandung yang ditunjuk dan atau disepakati\n       secara tertulis oleh keluarga dengan\n       alasan meninggal dunia atau sakit\n       permanen menurut keterangan kesehatan\n       Jemaah Haji\n',
                                 ),
                               ],
                             ),
                           ),
-                          // Memberikan jarak antara RichText dan Stack
-                          SizedBox(height: 5),
-                          // Stack untuk menampilkan teks dengan stroke dan teks utama
-                          Stack(
-                            children: [
-                              // Teks dengan stroke
-                              Container(
-                                child: Text(
-                                  'Larangan Ihram Bagi Perempuan',
-                                  maxLines: null,
-                                  overflow: TextOverflow.ellipsis,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Mochiy Pop One',
-                                    foreground: Paint()
-                                      ..style = PaintingStyle.stroke
-                                      ..color = Color(0xFF235092)
-                                      ..strokeWidth = 4,
-                                    shadows: [
-                                      Shadow(
-                                        blurRadius: 12,
-                                        color: Colors.black.withOpacity(1.0),
-                                        offset: Offset(0, 3),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              // Teks utama (berwarna hitam)
-                              Container(
-                                child: Text(
-                                  'Larangan Ihram Bagi Perempuan',
-                                  maxLines: null,
-                                  overflow: TextOverflow.ellipsis,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Mochiy Pop One',
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 5),
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(
-                                fontFamily: 'MontserratRomanBold',
-                                color: Color(0xFF235092),
-                                fontSize:
-                                    12, // Mengatur ukuran teks secara umum
-                                shadows: [
-                                  Shadow(
-                                    blurRadius: 2,
-                                    color: Colors.black.withOpacity(0.2),
-                                    offset: Offset(0, 1),
-                                  ),
-                                ],
-                              ),
-                              children: [
-                                TextSpan(
-                                  text:
-                                      'Larangan Ihram bagi perempuan', // Teks pertama yang akan dibuat tebal
-                                  style: TextStyle(
-                                    fontWeight: FontWeight
-                                        .bold, // Membuat teks pertama menjadi tebal
-                                  ),
-                                ),
-                                TextSpan(
-                                  text:
-                                      ' adalah hal-hal yang tidak boleh dilakukan oleh perempuan yang sedang ihram, baik haji maupun umrah. Tentunya juga mematuhi larangan yang berlaku umum.\n\nBerikut larangan ihram yang harus dipatuhi oleh jamaah perempuan:\n- Menutup wajah memakai cadar\n- Menutup kedua telapak tangan memakai sarung tangan',
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(height: 20),
-                          // Stack untuk menampilkan teks dengan stroke dan teks utama
-                          Stack(
-                            children: [
-                              // Teks dengan stroke
-                              Container(
-                                child: Text(
-                                  'Larangan Ihram Bagi Laki-laki',
-                                  maxLines: null,
-                                  overflow: TextOverflow.ellipsis,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Mochiy Pop One',
-                                    foreground: Paint()
-                                      ..style = PaintingStyle.stroke
-                                      ..color = Color(0xFF235092)
-                                      ..strokeWidth = 4,
-                                    shadows: [
-                                      Shadow(
-                                        blurRadius: 12,
-                                        color: Colors.black.withOpacity(1.0),
-                                        offset: Offset(0, 3),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              // Teks utama (berwarna hitam)
-                              Container(
-                                child: Text(
-                                  'Larangan Ihram Bagi Laki-laki',
-                                  maxLines: null,
-                                  overflow: TextOverflow.ellipsis,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Mochiy Pop One',
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(
-                                        blurRadius: 2,
-                                        color: Colors.black.withOpacity(1.0),
-                                        offset: Offset(0, 1),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 5),
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(
-                                fontFamily: 'MontserratRomanBold',
-                                color: Color(0xFF235092),
-                                fontSize:
-                                    12, // Mengatur ukuran teks secara umum
-                                shadows: [
-                                  Shadow(
-                                    blurRadius: 2,
-                                    color: Colors.black.withOpacity(0.2),
-                                    offset: Offset(0, 1),
-                                  ),
-                                ],
-                              ),
-                              children: [
-                                TextSpan(
-                                  text:
-                                      'Larangan Ihram bagi laki-laki', // Teks pertama yang akan dibuat tebal
-                                  style: TextStyle(
-                                    fontWeight: FontWeight
-                                        .bold, // Membuat teks pertama menjadi tebal
-                                  ),
-                                ),
-                                TextSpan(
-                                  text:
-                                      ' adalah hal-hal yang tidak boleh dilakukan oleh pria yang sedang ihram, baik haji maupun umrah. Tentunya juga mematuhi larangan yang berlaku umum.\n\nBerikut larangannya tambahan untuk laki-laki:\n- Memakai pakaian yang dijahit\n- Memakai tutup kepala\n- Memakai sarung tangan\n- Memakai alas kaki\n',
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(height: 5),
                         ],
                       ),
                     ),
