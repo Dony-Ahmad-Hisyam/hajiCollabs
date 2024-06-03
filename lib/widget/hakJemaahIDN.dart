@@ -27,51 +27,335 @@ class _hakjemaahidnState extends State<hakjemaahidn> {
           },
         ),
       ),
-      body: Stack(
-        children: [
-          // Kotak isi deskripsi
-          Positioned.fill(
-            top: MediaQuery.of(context).size.height * 0.10,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0),
-              child: Container(
-                padding: EdgeInsets.all(0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Image.asset(
+                  'images/Hak jemaah page IDN.jpg',
+                  fit: BoxFit.cover,
+                  alignment: Alignment.topCenter,
                 ),
-                child: CustomImageView(
-                        imagePath: ImageConstant.imgHak,
-                        alignment: Alignment.center,
-                      ),
+              ],
+            ),
           ),
-                ),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            sliver: SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  Container(
+                    color: Colors.white, // Set the background color to white
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // RichText dengan konten deskripsi
+                          RichText(
+                            text: TextSpan(
+                              style: TextStyle(
+                                fontFamily: 'MontserratRomanBold',
+                                color: Color(0xFF235092),
+                                fontSize:
+                                    12, // Mengatur ukuran teks secara umum
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 2,
+                                    color: Colors.black.withOpacity(0.2),
+                                    offset: Offset(0, 1),
+                                  ),
+                                ],
+                              ),
+                              children: [
+                                TextSpan(
+                                  text:
+                                      'Larangan Ihram', // Teks pertama yang akan dibuat tebal
+                                  style: TextStyle(
+                                    fontWeight: FontWeight
+                                        .bold, // Membuat teks pertama menjadi tebal
+                                  ),
+                                ),
+                                TextSpan(
+                                  text:
+                                      ' adalah hal-hal yang tidak boleh dilakukan oleh orang yang sedang ihram, baik saat haji maupun umrah. Tujuannya untuk menjaga kesucian dan kekhusyukan ibadah.\n\nJika seseorang melanggar salah satu larangan maka ia wajib membayar fidyah. Fidyah adalah denda yang harus dibayar untuk menebus pelanggaran larangan ihram.\n\nJika pelanggaran larangan ihram dilakukan dengan sengaja, maka fidyah harus dibayar dua kali lipat. Sehingga penting untuk kamu mengetahui apa saja larangan ihram bagi perempuan dan laki-laki.',
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                              height:
+                                  25), // Memberikan jarak antara RichText dan Stack
+                          // Stack untuk menampilkan teks dengan stroke dan teks utama
+                          Stack(
+                            children: [
+                              // Teks dengan stroke
+                              Container(
+                                child: Text(
+                                  'Larangan Ihram Bagi Laki-laki dan Perempuan',
+                                  maxLines: null,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Mochiy Pop One',
+                                    foreground: Paint()
+                                      ..style = PaintingStyle.stroke
+                                      ..color = Color(0xFF235092)
+                                      ..strokeWidth = 4,
+                                    shadows: [
+                                      Shadow(
+                                        blurRadius: 12,
+                                        color: Colors.black.withOpacity(1.0),
+                                        offset: Offset(0, 3),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              // Teks utama (berwarna hitam)
+                              Container(
+                                child: Text(
+                                  'Larangan Ihram Bagi Laki-laki dan Perempuan',
+                                  maxLines: null,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Mochiy Pop One',
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 5),
+                          RichText(
+                            text: TextSpan(
+                              style: TextStyle(
+                                fontFamily: 'MontserratRomanBold',
+                                color: Color(0xFF235092),
+                                fontSize:
+                                    12, // Mengatur ukuran teks secara umum
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 2,
+                                    color: Colors.black.withOpacity(0.2),
+                                    offset: Offset(0, 1),
+                                  ),
+                                ],
+                              ),
+                              children: [
+                                TextSpan(
+                                  text:
+                                      '1. Memotong atau mencabut rambut, bulu, atau kuku\n',
+                                ),
+                                TextSpan(
+                                  text:
+                                      '2. Memakai wewangian kecuali yang sudah dipakai sebelum\n    melakukan niat ihram.\n',
+                                ),
+                                TextSpan(
+                                  text:
+                                      '3. Berburu dan memakan hewan hasil buruan\n',
+                                ),
+                                TextSpan(
+                                  text:
+                                      '4. Melakukan hubungan seks dan yang mengundang syahwat\n',
+                                ),
+                                TextSpan(
+                                  text: '5. Melakukan kejahatan dan maksiat\n',
+                                ),
+                                TextSpan(
+                                  text: '6. Bertengkar atau berkelahi\n',
+                                ),
+                                TextSpan(
+                                  text:
+                                      '7. Mengucapkan kata-kata kotor atau mencaci.\n',
+                                ),
+                                TextSpan(
+                                  text:
+                                      '8. Dilarang menikah, menikahkan ataupun meminang untuk dinikahi.\n',
+                                ),
+                              ],
+                            ),
+                          ),
+                          // Memberikan jarak antara RichText dan Stack
+                          SizedBox(height: 5),
+                          // Stack untuk menampilkan teks dengan stroke dan teks utama
+                          Stack(
+                            children: [
+                              // Teks dengan stroke
+                              Container(
+                                child: Text(
+                                  'Larangan Ihram Bagi Perempuan',
+                                  maxLines: null,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Mochiy Pop One',
+                                    foreground: Paint()
+                                      ..style = PaintingStyle.stroke
+                                      ..color = Color(0xFF235092)
+                                      ..strokeWidth = 4,
+                                    shadows: [
+                                      Shadow(
+                                        blurRadius: 12,
+                                        color: Colors.black.withOpacity(1.0),
+                                        offset: Offset(0, 3),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              // Teks utama (berwarna hitam)
+                              Container(
+                                child: Text(
+                                  'Larangan Ihram Bagi Perempuan',
+                                  maxLines: null,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Mochiy Pop One',
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 5),
+                          RichText(
+                            text: TextSpan(
+                              style: TextStyle(
+                                fontFamily: 'MontserratRomanBold',
+                                color: Color(0xFF235092),
+                                fontSize:
+                                    12, // Mengatur ukuran teks secara umum
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 2,
+                                    color: Colors.black.withOpacity(0.2),
+                                    offset: Offset(0, 1),
+                                  ),
+                                ],
+                              ),
+                              children: [
+                                TextSpan(
+                                  text:
+                                      'Larangan Ihram bagi perempuan', // Teks pertama yang akan dibuat tebal
+                                  style: TextStyle(
+                                    fontWeight: FontWeight
+                                        .bold, // Membuat teks pertama menjadi tebal
+                                  ),
+                                ),
+                                TextSpan(
+                                  text:
+                                      ' adalah hal-hal yang tidak boleh dilakukan oleh perempuan yang sedang ihram, baik haji maupun umrah. Tentunya juga mematuhi larangan yang berlaku umum.\n\nBerikut larangan ihram yang harus dipatuhi oleh jamaah perempuan:\n- Menutup wajah memakai cadar\n- Menutup kedua telapak tangan memakai sarung tangan',
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          // Stack untuk menampilkan teks dengan stroke dan teks utama
+                          Stack(
+                            children: [
+                              // Teks dengan stroke
+                              Container(
+                                child: Text(
+                                  'Larangan Ihram Bagi Laki-laki',
+                                  maxLines: null,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Mochiy Pop One',
+                                    foreground: Paint()
+                                      ..style = PaintingStyle.stroke
+                                      ..color = Color(0xFF235092)
+                                      ..strokeWidth = 4,
+                                    shadows: [
+                                      Shadow(
+                                        blurRadius: 12,
+                                        color: Colors.black.withOpacity(1.0),
+                                        offset: Offset(0, 3),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              // Teks utama (berwarna hitam)
+                              Container(
+                                child: Text(
+                                  'Larangan Ihram Bagi Laki-laki',
+                                  maxLines: null,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Mochiy Pop One',
+                                    color: Colors.white,
+                                    shadows: [
+                                      Shadow(
+                                        blurRadius: 2,
+                                        color: Colors.black.withOpacity(1.0),
+                                        offset: Offset(0, 1),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 5),
+                          RichText(
+                            text: TextSpan(
+                              style: TextStyle(
+                                fontFamily: 'MontserratRomanBold',
+                                color: Color(0xFF235092),
+                                fontSize:
+                                    12, // Mengatur ukuran teks secara umum
+                                shadows: [
+                                  Shadow(
+                                    blurRadius: 2,
+                                    color: Colors.black.withOpacity(0.2),
+                                    offset: Offset(0, 1),
+                                  ),
+                                ],
+                              ),
+                              children: [
+                                TextSpan(
+                                  text:
+                                      'Larangan Ihram bagi laki-laki', // Teks pertama yang akan dibuat tebal
+                                  style: TextStyle(
+                                    fontWeight: FontWeight
+                                        .bold, // Membuat teks pertama menjadi tebal
+                                  ),
+                                ),
+                                TextSpan(
+                                  text:
+                                      ' adalah hal-hal yang tidak boleh dilakukan oleh pria yang sedang ihram, baik haji maupun umrah. Tentunya juga mematuhi larangan yang berlaku umum.\n\nBerikut larangannya tambahan untuk laki-laki:\n- Memakai pakaian yang dijahit\n- Memakai tutup kepala\n- Memakai sarung tangan\n- Memakai alas kaki\n',
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            
-         ]),
-        
-      
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
-
-List<String> steps = [
-  '\tPeserta memulai ibadah dengan ihram dari miqat yang telah\t\d   ditentukan. Miqat adalah batas waktu dan tempat melakukan ibadah haji serta umrah. Ada miqat zamani (batas waktu) dan miqat makani (batas tempat).Adapun miqat zamani adalah pada bulan Syawal, Zulkaidah, dan Zulhijah. Sementara miqat makani ada di beberapa kota tergantung dari arah kedatangan jemaah haji. Berikut ini urutan pelaksanaan ihram:\n• Melaksanakan mandi sunnah\n• berwudu\n• Berpakaian ihram\n• Mengerjakan shalat sunnah ihram\n• Mengucapkan niat haji\n• Berangkat ke Arafah sambil membaca talbiyah',
-  '\tWukuf adalah berdiam di Arafah yang dilaksanakan pada 9 Zulhijah. Wukuf dimulai setelah matahari tergelincir hingga terbit fajar pada 10 Zulhijah atau Hari Raya Idul Adha.Beberapa amalan yang bisa dikerjakan saat wukuf adalah sebagai berikut:\n• Mengerjakan sholat Zuhur dan Asar dengan cara jamak qasar di awal waktu.\n• Mendengarkan khutbah wukuf.\n• Memperbanyak doa.\n• Memperbanyak zikir.\n• Membaca Al-Qur`an.\n• Mengerjakan sholat Magrib dan Isya dengan cara jamak qasar di awal waktu.',
-  '\tMabit berarti bermalam. Muzdalifah adalah tempat yang berada di antara Arafah dan Mina. Setelah tengah malam, jemaah haji berangkat dari Arafah menuju Mina. Di Muzdalifah, jemaah haji berhenti walaupun sebentar. Beberapa amalan yang bisa dikerjakan, antara lain sebagai berikut:\n• Membaca talbiyah. \n• Memperbanyak zikir, istigfar, dan berdoa. \n• Membaca Al-Quran. \n• Mencari kerikil sebanyak 7, 49, dan 70 butir.',
-  '\tJemaah kemudian harus melempar jumrah aqabah, yaitu melempar batu ke arah tugu batu di Bukit Aqabah. Pelaksanaannya dilakukan setelah fajar menyingsing atau siang hari pada tanggal 10 Zulhijah dengan 7 butir kerikil. Kemudian jemaah haji menyembelih hewan kurban.',
-  '\tTahalul yaitu melepaskan diri dari ihram setelah mengerjakan amalan-amalan haji. Tahap pertama dilakukan setelah selesai melontar jumrah aqabah dengan cara mencukur sekurang-kurangnya tiga helai rambut. Dengan demikian, jemaah boleh mengerjakan semua hal yang dilarang saat ihram, kecuali melakukan hubungan suami istri. Setelahnya, jemaah yang akan melaksanakan tawaf ifadah bisa langsung ke Makkah. Hal-hal yang bisa dikerjakan di Makkah di antaranya:\n• Masuk Masjidil Haram melalui pintu Babussalam. \n• Melakukan thawaf ifadah dengan membaca talbiyah. \n• Selesai tawaf disunahkan mencium Hajar Aswad. \n• Melaksanakan sholat sunah dua rakaat di dekat makam Nabi Ibrahim. \n• Berdoa di Multazam. \n• Melaksanakan sholat sunah dua rakaat di Hijir Ismail. \n• Mengerjakan sai antara Safa dan Marwah sampai tujuh kali. \n• Pada tahalul kedua, jemaah kembali menggunting sekurang-kurangnya tiga helai rambut. Setelah ini, jemaah boleh mengerjakan larangan ihram, termasuk berhubungan suami istri.',
-  '\tJemaah kemudian kembali ke Mina untuk mabit selama hari Tasyrik (11, 12, dan 13 Zulhijah). Usai matahari tergelincir pada setiap siang hari Tasyrik, jemaah melontar tiga jumrah, yaitu jumrah ula, wusta, dan aqabah, yang masing-masing sebanyak tujuh kali. Jemaah boleh untuk meninggalkan Mina lebih awal pada tanggal 12 Zulhijah setelah melempar jumrah. Hal ini disebut dengan nafar awwal.Namun akan lebih sempurna jika jemaah meninggalkan Mina pada 13 Zulhijah. Dengan demikian, jemaah haji melontar jumrah selama tiga hari dalam hari Tasyrik yang disebut dengan nafar tsani. Jemaah haji lalu kembali ke Mekkah dan seluruh rangkaian ibadah haji sudah selesai.',
-  '\tTawaf wada berarti tawaf perpisahan atau sebagai penutup semua rangkaian ibadah haji. Setelahnya, jemaah diperbolehkan pulang ke kampung halaman atau ke Madinah dahulu bagi yang belum berziarah ke makam Nabi Muhammad SAW. Nah, itulah tadi penjelasan mengenai manasik haji yang merupakan simulasi atau latihan pelaksanaan haji agar calon haji tidak bingung ketika berada di Makkah. Pahami dengan benar urutan dan tata cara di setiap rukunnya, ya!',
-  '',
-];
-
-List<String> stepImages = [
-  'images/1.png',
-  'images/2.png',
-  'images/3.png',
-  'images/4.png',
-  'images/5.png',
-  'images/6.png',
-  'images/7.png',
-  'images/done.jpeg'
-];
