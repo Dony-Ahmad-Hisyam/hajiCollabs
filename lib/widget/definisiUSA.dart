@@ -61,10 +61,10 @@ class _defisiniUSAPageState extends State<defisiniUSAPage> {
                       Text(
                         "\tQuoted from the Big Indonesian Dictionary (KBBI) of the Ministry of Education and Culture, etymologically, manasik comes from Arabic which means a place that is usually visited; worship place; worship time; worship.\r\n\r\n\tMeanwhile, Hajj rituals in the KBBI mean things related to the Hajj pilgrimage, such as ihram, tawaf, sai, and wukuf. Another meaning is a demonstration of the implementation of the Hajj pilgrimage in accordance with its pillars (usually using an imitation Kaaba and so on). implementation of the Hajj pilgrimage, such as the pillars of the Hajj, requirements, obligatory things, things that are Sunnah, and things that are prohibited during the Hajj pilgrimage. This exercise is not only theoretical, but is practiced as closely as possible to the situation in Saudi Arabia.\n",
                         style: TextStyle(
-                          fontFamily: 'MontserratRomanBold',
-                          color: Color(0xFF235092),
-                          fontWeight: FontWeight.bold,
-                        ),
+                            fontFamily: 'MontserratRomanBold',
+                            color: Color(0xFF235092),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16),
                       ),
                     ],
                   ),

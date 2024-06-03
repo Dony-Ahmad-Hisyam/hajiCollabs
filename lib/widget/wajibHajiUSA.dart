@@ -59,12 +59,12 @@ class _wajibHajiUSAPageState extends State<wajibHajiUSAPage> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        "\tBefore going into the Hajj procedures that will be learned in the Hajj rituals, we first understand the obligatory Hajj. Reporting from walisongo.ac.id, the obligatory Hajj is everything that must be done during the Hajj. If you leave it, you have to pay a check (fine). The seven obligatory pilgrimages are as follows.\n1. Ihram from miqat.\n2. Wukuf at Arafah.\n3. Mabit or overnight in Muzdalifah on the \n    9th of Dzulhijjah.\n4. Mabit or overnight in Mina on the day of \n    tashrik (11,12,13 Dzulhijjah).\n5. Tahallul / shave your hair.\n6. Throwing the python.\n7. Tawaf Wada`",
+                        "\tBefore going into the Hajj procedures that will be learned in the Hajj rituals, we first understand the obligatory Hajj. Reporting from walisongo.ac.id, the obligatory Hajj is everything that must be done during the Hajj. If you leave it, you have to pay a check (fine). The seven obligatory pilgrimages are as follows.\n1. Ihram from miqat.\n2. Wukuf at Arafah.\n3. Mabit or overnight in Muzdalifah on the 9th of Dzulhijjah.\n4. Mabit or overnight in Mina on the day of \n    tashrik (11,12,13 Dzulhijjah).\n5. Tahallul / shave your hair.\n6. Throwing the python.\n7. Tawaf Wada`",
                         style: TextStyle(
-                          fontFamily: 'MontserratRomanBold',
-                          color: Color(0xFF235092),
-                          fontWeight: FontWeight.bold,
-                        ),
+                            fontFamily: 'MontserratRomanBold',
+                            color: Color(0xFF235092),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16),
                       ),
                     ],
                   ),

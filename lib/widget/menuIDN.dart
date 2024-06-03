@@ -7,6 +7,8 @@ import 'package:haji/widget/laranganIhramIDN.dart';
 import 'package:haji/widget/menuUSA.dart';
 import 'package:haji/widget/tataCaraIDN.dart';
 import 'package:haji/widget/tataHajiWanitaIDN.dart';
+import 'package:haji/widget/video_tutorial_haji_idn.dart';
+import 'package:haji/widget/video_tutorial_transportasi_idn.dart';
 import 'package:haji/widget/wajibHajiIDN.dart';
 
 class MenuIDNPages extends StatefulWidget {
@@ -82,7 +84,10 @@ class _MenuIDNPagesState extends State<MenuIDNPages> {
                 'images/menuVid2.png',
               ],
               context,
-              targetPages: [menuUSAPages(), CaraWanitaPage()],
+              targetPages: [
+                VideotutorialHajiPages(),
+                VideotutorialTransportasiPages()
+              ],
             ),
           ],
         ),
