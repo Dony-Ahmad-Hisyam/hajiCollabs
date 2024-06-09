@@ -238,7 +238,7 @@ class _CameraScreenUSAState extends State<CameraScreenUSA> {
               title: Container(
                 decoration: BoxDecoration(),
                 child: Text(
-                  "Terjemahan",
+                  "Translation",
                   style: theme.textTheme.titleLarge?.copyWith(
                     fontSize: 27,
                     fontWeight: FontWeight.w700,
