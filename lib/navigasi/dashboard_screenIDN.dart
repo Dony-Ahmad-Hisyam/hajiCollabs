@@ -80,7 +80,7 @@ class DashboardScreenIDN extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, AppRoutes.definisidIDN);
+                  Navigator.pushNamed(context, AppRoutes.camerascreenIDN);
                 },
                 child: Image.asset(
                   'images/camera.png',

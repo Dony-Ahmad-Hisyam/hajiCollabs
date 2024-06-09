@@ -21,7 +21,8 @@ class _CameraScreenIDNState extends State<CameraScreenIDN> {
   @override
   void initState() {
     super.initState();
-    grouptwoController.addListener(_translateOnType); // Check permissions on app start
+    grouptwoController
+        .addListener(_translateOnType); // Check permissions on app start
   }
 
   @override
@@ -36,31 +37,32 @@ class _CameraScreenIDNState extends State<CameraScreenIDN> {
     _translateText(grouptwoController.text);
   }
 
-void _retryPermissionRequest() {
-  Future.delayed(Duration(seconds: 1), () {
-    _getPermissions();
-  });
-}
+  void _retryPermissionRequest() {
+    Future.delayed(Duration(seconds: 1), () {
+      _getPermissions();
+    });
+  }
 
   Future<void> _pickImage(ImageSource source) async {
     final permissionStatus = await _getPermissions();
     if (!permissionStatus) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text("Izin dibutuhkan untuk kamera."),
-      duration: Duration(seconds: 1),
-      action: SnackBarAction(
-        label: 'ulang',
-        onPressed: _retryPermissionRequest,
-      ),
-    ));
-    return;
-  }
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Izin dibutuhkan untuk kamera."),
+        duration: Duration(seconds: 1),
+        action: SnackBarAction(
+          label: 'ulang',
+          onPressed: _retryPermissionRequest,
+        ),
+      ));
+      return;
+    }
 
     final pickedFile = await _picker.pickImage(source: source);
 
     if (pickedFile != null) {
       final inputImage = InputImage.fromFilePath(pickedFile.path);
-      final RecognizedText recognizedText = await textRecognizer.processImage(inputImage);
+      final RecognizedText recognizedText =
+          await textRecognizer.processImage(inputImage);
 
       setState(() {
         grouptwoController.text = recognizedText.text;
@@ -76,7 +78,8 @@ void _retryPermissionRequest() {
 
     if (pickedFile != null) {
       final inputImage = InputImage.fromFilePath(pickedFile.path);
-      final RecognizedText recognizedText = await textRecognizer.processImage(inputImage);
+      final RecognizedText recognizedText =
+          await textRecognizer.processImage(inputImage);
 
       setState(() {
         grouptwoController.text = recognizedText.text;
@@ -84,28 +87,26 @@ void _retryPermissionRequest() {
 
       _translateText(recognizedText.text);
     }
-    }
-  
-
-Future<bool> _requestCameraPermission() async {
-  var cameraStatus = await Permission.camera.status;
-  if (!cameraStatus.isGranted) {
-    cameraStatus = await Permission.camera.request();
-    if (!cameraStatus.isGranted) {
-      return false;
-    }
   }
-  return true;
-}
 
-Future<bool> _getPermissions() async {
-  bool cameraPermission = await _requestCameraPermission();
+  Future<bool> _requestCameraPermission() async {
+    var cameraStatus = await Permission.camera.status;
+    if (!cameraStatus.isGranted) {
+      cameraStatus = await Permission.camera.request();
+      if (!cameraStatus.isGranted) {
+        return false;
+      }
+    }
+    return true;
+  }
 
-  return cameraPermission;
-}
+  Future<bool> _getPermissions() async {
+    bool cameraPermission = await _requestCameraPermission();
+
+    return cameraPermission;
+  }
 
 // Kemudian di tempat lain dalam kode Anda, Anda dapat memanggil _requestPermissions()
-
 
   Future<void> _translateText(String text) async {
     if (text.isEmpty) {
@@ -127,61 +128,59 @@ Future<bool> _getPermissions() async {
   }
 
   @override
-Widget build(BuildContext context) {
-  return SafeArea(
-    child: Scaffold(
-      backgroundColor: appTheme.whiteA700,
-      resizeToAvoidBottomInset: false,
-      body: SingleChildScrollView(
-        child: SizedBox(
-          height: MediaQuery.of(context).size.height * 1.7,
-          width: 430.h,
-          child: Stack(
-            alignment: Alignment.topCenter,
-            children: [
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  margin: EdgeInsets.only(top: 5),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 32,
-                    vertical: 108,
-                  ),
-                  decoration: BoxDecoration(
-                    color: appTheme.cyan300,
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: appTheme.whiteA700,
+        resizeToAvoidBottomInset: false,
+        body: SingleChildScrollView(
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height * 1,
+            width: 430.h,
+            child: Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 5),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 32,
+                      vertical: 108,
+                    ),
+                    decoration: BoxDecoration(
                       color: appTheme.cyan300,
-                      width: 3.h,
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(
+                        color: appTheme.cyan300,
+                        width: 3.h,
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [Spacer(), _buildAplikasiSection(context)],
                     ),
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    
-                    children: [Spacer(), _buildAplikasiSection(context)],
-                  ),
                 ),
-              ),
-              Align(
-                alignment: Alignment.topCenter,
-                child: SizedBox(
-                
-                  width: 430.h,
-                  child: Stack(
-                    alignment: Alignment.bottomCenter,
-                    children: [
-                      _buildVectorSection(context),
-                    ],
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: SizedBox(
+                    width: 430.h,
+                    child: Stack(
+                      alignment: Alignment.bottomCenter,
+                      children: [
+                        _buildVectorSection(context),
+                      ],
+                    ),
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 
   Widget _buildAplikasiSection(BuildContext context) {
     return Container(
@@ -199,7 +198,7 @@ Widget build(BuildContext context) {
           width: 3.h,
         ),
       ),
-      child: Container(       
+      child: Container(
         width: 281.h,
         margin: EdgeInsets.only(right: 31),
         child: Text(
@@ -229,28 +228,11 @@ Widget build(BuildContext context) {
           mainAxisSize: MainAxisSize.min,
           children: [
             AppBar(
+              automaticallyImplyLeading: false,
               elevation: 0,
               toolbarHeight: 75,
               backgroundColor: Colors.transparent,
-              automaticallyImplyLeading: false,
               leadingWidth: 50,
-              leading: Padding(
-                padding: EdgeInsets.only(
-                  left: 33,
-                  top: 10,
-                  bottom: 24,
-                ),
-                child: IconButton(
-                  icon: Icon(
-                    Icons.chevron_left,
-                    size: 40,
-                    color: Color.fromARGB(255, 255, 255, 255),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                ),
-              ),
               centerTitle: true,
               title: Container(
                 decoration: BoxDecoration(),
@@ -301,7 +283,8 @@ Widget build(BuildContext context) {
                 textInputAction: TextInputAction.done,
                 maxLines: 11,
                 decoration: InputDecoration(
-                  hintText: "tulis text atau jelajahi dengan ikon camera dibawah",
+                  hintText:
+                      "tulis text atau jelajahi dengan ikon camera dibawah",
                   hintStyle: theme.textTheme.titleLarge?.copyWith(
                     color: Color(0XFF000000),
                     fontSize: 15,
@@ -364,7 +347,8 @@ Widget build(BuildContext context) {
                       Icons.folder,
                       size: 50.0,
                     ),
-                    onPressed: () => _getImageAndConvertToText(ImageSource.gallery),
+                    onPressed: () =>
+                        _getImageAndConvertToText(ImageSource.gallery),
                   ),
                 ],
               ),

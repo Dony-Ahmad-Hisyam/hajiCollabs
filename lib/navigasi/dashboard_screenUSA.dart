@@ -14,6 +14,7 @@ class DashboardScreenUSA extends StatelessWidget {
         backgroundColor: Colors.white,
         extendBodyBehindAppBar: true,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Colors.white,
           elevation: 0,
           leading: IconButton(
@@ -81,7 +82,7 @@ class DashboardScreenUSA extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, AppRoutes.definisidIDN);
+                  Navigator.pushNamed(context, AppRoutes.camerascreenUSA);
                 },
                 child: Image.asset(
                   'images/camera.png',
