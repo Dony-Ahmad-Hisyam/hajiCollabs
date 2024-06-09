@@ -21,6 +21,8 @@ import 'package:haji/widget/hakJemaahIDN.dart';
 import 'package:haji/widget/hakJemaahUSA.dart';
 import 'package:haji/widget/hikmahIDN.dart';
 import 'package:haji/widget/hikmahUSA.dart';
+import 'package:haji/widget/camera_screenIDN.dart';
+import 'package:haji/widget/camera_screenUSA.dart';
 
 class AppRoutes {
   static const String pilihBahasaScreen = '/pilih_bahasa_screen';
@@ -44,6 +46,9 @@ class AppRoutes {
   static const String tataHajiWanitaUSA = '/tataHajiWanitaEng';
   static const String manuAllIDN = '/menuIDN';
   static const String menuUSA = '/menuUSA';
+  static const String camerascreenIDN = '/camera_screenIDN.dart';
+  static const String camerascreenUSA = '/camera_screenUSA.dart';
+  
 
   static Map<String, WidgetBuilder> routes = {
     dashboardIDN: (context) => DashboardScreenIDN(),
@@ -67,5 +72,7 @@ class AppRoutes {
     tataHajiWanitaUSA: (context) => CaraWanitaEngPage(),
     manuAllIDN: (context) => MenuIDNPages(),
     menuUSA: (context) => menuUSAPages(),
+    camerascreenIDN: (context) => CameraScreenIDN(),
+    camerascreenUSA: (context) => CameraScreenUSA(),
   };
 }
